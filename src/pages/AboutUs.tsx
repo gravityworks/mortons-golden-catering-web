@@ -86,7 +86,7 @@ const AboutUs = () => {
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 mt-1">
-                        <div className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center text-white">
+                        <div className="bg-gold w-8 h-8 rounded-full flex items-center justify-center text-white">
                           <CircleDot className="h-5 w-5" />
                         </div>
                       </div>
@@ -98,7 +98,7 @@ const AboutUs = () => {
                     
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 mt-1">
-                        <div className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center text-white">
+                        <div className="bg-gold w-8 h-8 rounded-full flex items-center justify-center text-white">
                           <CircleDot className="h-5 w-5" />
                         </div>
                       </div>
@@ -110,7 +110,7 @@ const AboutUs = () => {
                     
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 mt-1">
-                        <div className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center text-white">
+                        <div className="bg-gold w-8 h-8 rounded-full flex items-center justify-center text-white">
                           <CircleDot className="h-5 w-5" />
                         </div>
                       </div>
@@ -122,7 +122,7 @@ const AboutUs = () => {
                     
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 mt-1">
-                        <div className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center text-white">
+                        <div className="bg-gold w-8 h-8 rounded-full flex items-center justify-center text-white">
                           <CircleDot className="h-5 w-5" />
                         </div>
                       </div>
