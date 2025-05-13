@@ -1,718 +1,654 @@
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import Hero from '@/components/ui/hero/Hero';
+import { Separator } from '@/components/ui/separator';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import BookCta from '@/components/ui/book-cta/BookCta';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Card, CardContent } from '@/components/ui/card';
-
-type MenuCategory = 'all' | 'wedding' | 'corporate' | 'campus';
-
-type MenuItem = {
-  name: string;
-  description: string;
-  price?: string;
-  imageUrl: string;
-  categories: MenuCategory[];
-  featured?: boolean;
-};
-
-// Sample menu items data
-const menuItems: MenuItem[] = [
-  {
-    name: "Herb-Crusted Filet Mignon",
-    description: "Prime beef tenderloin with herb crust, served with truffle mashed potatoes and seasonal vegetables",
-    price: "$45 per person",
-    imageUrl: "https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    categories: ['wedding', 'corporate'],
-    featured: true,
-  },
-  {
-    name: "Seared Sea Bass",
-    description: "Fresh sea bass with lemon beurre blanc, wild rice pilaf, and grilled asparagus",
-    price: "$42 per person",
-    imageUrl: "https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    categories: ['wedding', 'corporate', 'campus'],
-    featured: true,
-  },
-  {
-    name: "Roasted Vegetable Tart",
-    description: "Seasonal vegetables in a flaky pastry crust with herbed goat cheese and balsamic reduction",
-    price: "$32 per person",
-    imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-    categories: ['wedding', 'corporate', 'campus'],
-  },
-  {
-    name: "Artisanal Cheese & Charcuterie Station",
-    description: "Selection of fine cheeses, cured meats, house-made preserves, and artisan breads",
-    price: "$18 per person",
-    imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-    categories: ['wedding', 'corporate', 'campus'],
-  },
-  {
-    name: "Seafood Raw Bar",
-    description: "Fresh oysters, shrimp, crab claws, and lobster tails with classic accompaniments",
-    price: "$MP",
-    imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-    categories: ['wedding', 'corporate'],
-    featured: true,
-  },
-  {
-    name: "Executive Lunch Buffet",
-    description: "Gourmet sandwiches, salads, fresh fruit, and dessert bites, perfect for corporate meetings",
-    price: "$28 per person",
-    imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-    categories: ['corporate', 'campus'],
-  },
-  {
-    name: "Student-Friendly Taco Bar",
-    description: "Build-your-own taco station with variety of proteins, toppings, and house-made salsas",
-    price: "$22 per person",
-    imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-    categories: ['campus'],
-  },
-  {
-    name: "Graduation Reception Package",
-    description: "Elegant passed hors d'oeuvres, celebration cake, and sparkling toast for graduates and families",
-    price: "$35 per person",
-    imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-    categories: ['campus'],
-    featured: true,
-  },
-];
-
-// Appetizer menu categories and items
-type AppetizersCategory = {
-  title: string;
-  items: {
-    name: string;
-    description: string;
-    price?: string;
-    dietaryInfo?: string[];
-  }[];
-};
-
-const appetizersMenu: AppetizersCategory[] = [
-  {
-    title: "Fruits and Cheese",
-    items: [
-      {
-        name: "Fresh Fruit Display",
-        description: "Seasonal fruits and berries, artfully presented",
-        price: "$80",
-        dietaryInfo: ["vegan", "gf"]
-      },
-      {
-        name: "Artisan Cheese Board",
-        description: "Wedges of specialty cheeses, with flatbread and crackers",
-        price: "$80",
-        dietaryInfo: ["v", "gf"]
-      },
-      {
-        name: "Baked Brie w/Raspberry",
-        description: "Large wheel of brie baked in puff pastry, with raspberry jam, flatbreads & crackers",
-        price: "$70",
-        dietaryInfo: ["v"]
-      },
-      {
-        name: "Cheese and Crackers",
-        description: "Cubed cheddar, Swiss, pepper jack, dill havarti, or Gouda",
-        price: "$65",
-        dietaryInfo: ["v", "gf"]
-      }
-    ]
-  },
-  {
-    title: "Dips and Spreads",
-    items: [
-      {
-        name: "Buffalo Chicken Dip",
-        description: "Like a hot wing, but in dip form! Corn chips and celery sticks",
-        price: "$85",
-        dietaryInfo: ["gf"]
-      },
-      {
-        name: "Caramelized Onion Dip",
-        description: "with kettle chips",
-        price: "$60",
-        dietaryInfo: ["v", "gf"]
-      },
-      {
-        name: "Hummus and Pita",
-        description: "Traditional garlic, lemon, tahini, chick peas and olive oil, house made pita crisps",
-        price: "$60",
-        dietaryInfo: ["vegan", "gf"]
-      },
-      {
-        name: "Pimento Cheese Dip",
-        description: "Southern inspired cheese dip with pimento peppers, served with pretzels",
-        price: "$75",
-        dietaryInfo: ["v"]
-      },
-      {
-        name: "Spinach and Artichoke Dip",
-        description: "Served warm with house made pita crisps",
-        price: "$85",
-        dietaryInfo: ["v", "gf"]
-      },
-      {
-        name: "Smoked Whitefish or Salmon Pate",
-        description: "Cream cheese, capers, and lemon with crackers or canapes",
-        price: "$85",
-        dietaryInfo: ["v", "gf"]
-      }
-    ]
-  },
-  {
-    title: "Apps with Snap",
-    items: [
-      {
-        name: "Asparagus Spears",
-        description: "Grilled, with lemon vinaigrette",
-        price: "$60",
-        dietaryInfo: ["vegan", "gf"]
-      },
-      {
-        name: "Roasted Carrots",
-        description: "Roasted and chilled, topped with spiced seed and nut brittle, lemon tahini sauce",
-        price: "$80",
-        dietaryInfo: ["vegan", "gf"]
-      },
-      {
-        name: "Vegetable Crudités",
-        description: "Fresh seasonal vegetables with our signature Green Goddess dip or Dill Ranch Dip",
-        price: "$65",
-        dietaryInfo: ["v", "gf"]
-      },
-      {
-        name: "Pickle Board",
-        description: "Pickled beets, artichokes, mini gherkins, pickled vegetables, peppadew peppers, mixed olives",
-        price: "$75",
-        dietaryInfo: ["vegan", "gf"]
-      }
-    ]
-  },
-  {
-    title: "Platters",
-    items: [
-      {
-        name: "Mezze Platter",
-        description: "Hummus, baba ghanoush, vegetarian grape leaves, falafel, feta, pickled turnips, olives, signature pita crisps",
-        price: "$160",
-        dietaryInfo: ["vegan", "gf", "df options"]
-      },
-      {
-        name: "Roasted and Grilled Vegetable Display",
-        description: "Marinated, seasoned, grilled and chilled, with asparagus, zucchini, squash (seasonal), peppers and portobello mushrooms",
-        price: "$100",
-        dietaryInfo: ["vegan", "gf"]
-      },
-      {
-        name: "Charcuterie",
-        description: "Chef's special selection of cured meats, stone-ground mustard, nuts, petit pickles, pickled red onion, toasts",
-        price: "$90",
-        dietaryInfo: ["df", "gf options"]
-      },
-      {
-        name: "Smoked Salmon Platter",
-        description: "with capers, red onion, chopped egg, tomato, dill ranch and crackers",
-        price: "$135",
-        dietaryInfo: ["df", "gf"]
-      },
-      {
-        name: "Whole Beef Tenderloin Platter",
-        description: "Chilled and sliced grilled beef tenderloin with rolls, horseradish cream and onion straws",
-        price: "Market Price",
-        dietaryInfo: ["df", "gf options"]
-      },
-      {
-        name: "Chilled Beef Platter",
-        description: "Grilled, roasted, chilled, and sliced end-cut tenderloin, served with rolls and horseradish cream",
-        price: "$160",
-        dietaryInfo: ["df", "gf options"]
-      }
-    ]
-  },
-  {
-    title: "Stations",
-    items: [
-      {
-        name: "Mashed Potato Bar",
-        description: "Mashed yukon gold potatoes with toppings; shredded cheddar, gorgonzola, sour cream, bacon, crispy onion straws, steamed broccoli, cracked pepper",
-        price: "$300"
-      },
-      {
-        name: "Mac n' Cheese Bar",
-        description: "Johnny's signature mac n' cheese with toppings: bacon, parmesan, potato chips, jalapeños, diced peppers, and hot sauce",
-        price: "$300"
-      }
-    ]
-  },
-  {
-    title: "Canapés, Crostinis, & Crisps",
-    items: [
-      {
-        name: "Phyllo Canapés",
-        description: "Brie, walnut and pear; or chevre with basil and tomato; or caramelized onion and boursin cheese",
-        price: "$85",
-        dietaryInfo: ["v"]
-      },
-      {
-        name: "Asparagus Crostini",
-        description: "Roasted shaved asparagus, ricotta, fresh dill and lemon zest on crostini",
-        price: "$85",
-        dietaryInfo: ["v"]
-      },
-      {
-        name: "Roasted Tomato Crostini",
-        description: "with za'atar and labne",
-        price: "$85",
-        dietaryInfo: ["v"]
-      },
-      {
-        name: "Traditional Bruschetta",
-        description: "Fresh tomatoes, cucumber, basil, and red onion, with crostini (crostini contains gluten and parmesan)",
-        price: "$65",
-        dietaryInfo: ["vegan", "gf"]
-      },
-      {
-        name: "Michigan White Bean Bruschetta",
-        description: "Roasted red peppers, fennel, fresh herbs and olive oil, crostini (crostini contains gluten and parmesan)",
-        price: "$70",
-        dietaryInfo: ["vegan", "gf"]
-      },
-      {
-        name: "Potato Skins w/Bacon",
-        description: "Halved mini red skins, cheddar cheese, scallions and bacon",
-        price: "$75"
-      },
-      {
-        name: "Boursin Stuffed Mushrooms",
-        description: "Vegetarian blend of spinach and boursin cheese",
-        price: "$70",
-        dietaryInfo: ["v"]
-      }
-    ]
-  },
-  {
-    title: "Meat Bites",
-    items: [
-      {
-        name: "Bourbon Meatballs",
-        description: "Browned meatballs tossed with homemade bourbon barbecue sauce",
-        price: "$90",
-        dietaryInfo: ["df"]
-      },
-      {
-        name: "Beef Wellington",
-        description: "Petite pastry puff with beef, peppercorn horsey cream on the side",
-        price: "$150"
-      },
-      {
-        name: "Tenderloin Crostini w/Chimichurri",
-        description: "Thinly sliced beef tenderloin with chimichurri, arugula, shaved parmesan on toasted baguette",
-        price: "$130",
-        dietaryInfo: ["df"]
-      },
-      {
-        name: "Chicken Rumaki",
-        description: "Bacon wrapped chicken in our special marinade, sweet chili glaze",
-        price: "$80",
-        dietaryInfo: ["gf", "df"]
-      },
-      {
-        name: "Sesame Chicken Kebab",
-        description: "Marinated chicken in ginger, sesame, and soy, hint of brown sugar (40 pieces)",
-        price: "$95",
-        dietaryInfo: ["halal", "gf", "df"]
-      },
-      {
-        name: "Southwest Chicken Eggroll",
-        description: "Spicy blend of chicken, black beans, and cheese wrapped in a crispy flour tortilla, Green Chile Ranch dipping sauce",
-        price: "$100"
-      },
-      {
-        name: "Pigs n' a Blanket",
-        description: "Mini hot dogs wrapped in pastry, honey Dijonniase dipping sauce",
-        price: "$90",
-        dietaryInfo: ["df"]
-      },
-      {
-        name: "Prosciutto",
-        description: "Wrapped melon and/or asparagus tips",
-        price: "$80",
-        dietaryInfo: ["gf", "df"]
-      },
-      {
-        name: "BBQ Wings",
-        description: "Johnny's homemade sweet and spicy barbecue sauce, Ranch on the side",
-        price: "$90",
-        dietaryInfo: ["gf"]
-      }
-    ]
-  },
-  {
-    title: "Vegetarian & Vegan Bites",
-    items: [
-      {
-        name: "Mac n' Cheese Bites",
-        description: "Mac n' cheese wrapped in golden fried crispy goodness",
-        price: "$90",
-        dietaryInfo: ["v"]
-      },
-      {
-        name: "Spanikopita",
-        description: "Mini spinach pie in phyllo",
-        price: "$90",
-        dietaryInfo: ["v"]
-      },
-      {
-        name: "Veggie Potato Skins",
-        description: "Halved mini red skins, cheddar cheese, scallions",
-        price: "$75",
-        dietaryInfo: ["v"]
-      },
-      {
-        name: "Potstickers",
-        description: "Shiitake mushroom, carrot, and bok choy, sesame soy sauce on the side",
-        price: "$95",
-        dietaryInfo: ["vegan"]
-      },
-      {
-        name: "Spring Rolls",
-        description: "Vegetarian, with dipping sauce",
-        price: "$90",
-        dietaryInfo: ["vegan"]
-      }
-    ]
-  },
-  {
-    title: "Seafood Bites",
-    items: [
-      {
-        name: "Coconut Shrimp",
-        description: "Coconut crusted shrimp with a spicy orange marmalade",
-        price: "$100",
-        dietaryInfo: ["df"]
-      },
-      {
-        name: "Lox Canape",
-        description: "Smoked salmon, whipped chevre, cucumber garnish",
-        price: "$85"
-      },
-      {
-        name: "Bang Bang Shrimp",
-        description: "with crispy panko crusted shrimp, bang bang sauce on the side",
-        price: "$95",
-        dietaryInfo: ["df"]
-      },
-      {
-        name: "Shrimp Cocktail",
-        description: "Chilled jumbo tail-on shrimp, with lemon and cocktail sauce",
-        price: "$100",
-        dietaryInfo: ["gf", "df"]
-      }
-    ]
-  },
-  {
-    title: "Sliders & Mini Buns",
-    items: [
-      {
-        name: "Aloha Chicken Slider",
-        description: "Shredded chicken breast with a sweet soy bbq sauce, shredded muenster blend cheese, pineapple, pickled red onions and fresh cilantro (40 pieces)",
-        price: "$160"
-      },
-      {
-        name: "French Onion Beef Slider",
-        description: "Tender sliced beef, creamy Swiss, caramelized onions, on a mini bun (40 pieces)",
-        price: "$160"
-      },
-      {
-        name: "Portobello Mushroom Slider",
-        description: "Grilled portobello, roasted red peppers, provolone, fresh basil aioli, on a mini bun (40 pieces)",
-        price: "$150",
-        dietaryInfo: ["v"]
-      },
-      {
-        name: "Silver Dollar Sandwiches",
-        description: "Chef's selection of deli meats, cheese, & special sauces on a mini bun (48 pieces)",
-        price: "$150"
-      },
-      {
-        name: "Veggie Pinwheel",
-        description: "Olives, artichoke, pepperoncini, sun-dried tomato pesto spread, arugula (48 pieces)",
-        price: "$75"
-      }
-    ]
-  },
-  {
-    title: "Crunchies",
-    items: [
-      {
-        name: "Asian Party Mix",
-        description: "with chex mix, rice crackers, and wasabi peas",
-        price: "$65"
-      },
-      {
-        name: "Maple Caramel Corn",
-        description: "Espelette pepper, toasted pepitas, self-serve $50, or in bamboo cone",
-        price: "$75",
-        dietaryInfo: ["gf"]
-      },
-      {
-        name: "Rosemary Spiced Cashews",
-        description: "Roasted in butter, tossed with fresh rosemary, self-serve or in bamboo cone",
-        price: "$50, $75",
-        dietaryInfo: ["gf"]
-      }
-    ]
-  }
-];
-
-// Sample data for other menu tabs (to be filled with real data later)
-const entreesMenu = [
-  {
-    title: "Signature Entrées",
-    items: [
-      {
-        name: "Herb-Crusted Filet Mignon",
-        description: "Prime beef tenderloin with herb crust, served with truffle mashed potatoes and seasonal vegetables",
-        price: "$45 per person"
-      },
-      {
-        name: "Seared Sea Bass",
-        description: "Fresh sea bass with lemon beurre blanc, wild rice pilaf, and grilled asparagus",
-        price: "$42 per person"
-      }
-    ]
-  }
-];
-
-const dessertsMenu = [
-  {
-    title: "Sweet Endings",
-    items: [
-      {
-        name: "Chocolate Trio",
-        description: "Dark chocolate mousse, milk chocolate ganache tart, and white chocolate covered strawberry",
-        price: "$12 per person"
-      },
-      {
-        name: "Seasonal Fruit Crisp",
-        description: "Warm seasonal fruit with oat streusel topping and vanilla bean ice cream",
-        price: "$10 per person"
-      }
-    ]
-  }
-];
 
 const Menus = () => {
-  const [activeCategory, setActiveCategory] = useState<MenuCategory>('all');
-  
-  const filteredMenuItems = activeCategory === 'all' 
-    ? menuItems 
-    : menuItems.filter(item => item.categories.includes(activeCategory));
-    
-  const featuredItems = menuItems.filter(item => item.featured);
-
-  // Helper function to render the dietary info badges
-  const renderDietaryInfo = (info?: string[]) => {
-    if (!info || info.length === 0) return null;
-    
-    return (
-      <div className="flex flex-wrap gap-1 mt-2">
-        {info.map((item, index) => (
-          <span 
-            key={index} 
-            className="text-xs px-2 py-0.5 rounded-full bg-rich-gray border border-gold/40 text-gold"
-          >
-            {item}
-          </span>
-        ))}
-      </div>
-    );
-  };
-
-  // Function to render a menu category section
-  const renderMenuCategory = (category: AppetizersCategory) => (
-    <div key={category.title} className="mb-10">
-      <h3 className="text-2xl font-playfair font-semibold text-white mb-4 border-b border-gold/30 pb-2">
-        [ {category.title} ]
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {category.items.map((item, index) => (
-          <div key={index} className="bg-rich-gray border border-gray-800 rounded-lg p-4 hover:border-gold/30 transition-all duration-300">
-            <div className="flex justify-between items-start mb-1">
-              <h4 className="text-xl font-playfair font-semibold text-gold">{item.name}</h4>
-              {item.price && <span className="text-white font-inter font-medium">{item.price}</span>}
-            </div>
-            <p className="text-gray-300 text-sm mb-2">{item.description}</p>
-            {renderDietaryInfo(item.dietaryInfo)}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-grow">
         <Hero 
-          title="Our Menus"
+          title="Menus"
           subtitle="MORTON'S FINE CATERING"
-          description="Discover our chef-driven menus that blend classic comfort with creative innovation, customizable for your unique event."
-          imageUrl="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
+          description="From elegant plated dinners to interactive stations and casual buffets, our culinary team crafts menus that showcase seasonal ingredients and global influences."
+          imageUrl="/lovable-uploads/ea15893c-7cab-4191-921a-bb420fb56005.png"
           height="min-h-[60vh]"
         />
         
-        <section className="py-20 bg-rich-black">
+        <section className="py-16 bg-rich-black">
           <div className="container-custom">
-            <div className="max-w-3xl mx-auto mb-16 text-center">
-              <h2 className="section-title">Culinary Excellence</h2>
-              <p className="text-gray-300 text-lg">
-                Our menus are crafted by experienced chefs who blend classic techniques with innovative 
-                approaches to create memorable dining experiences for any occasion.
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">Sample Menus</h2>
+              <p className="text-gray-300">
+                Below are samples of our most popular menu options. All menus can be customized to your preferences, 
+                dietary needs, and event style.
               </p>
             </div>
             
-            <div className="bg-rich-gray/50 border border-gold/20 rounded-lg p-8 mb-16">
-              <Tabs defaultValue="appetizers" className="w-full">
-                <div className="flex justify-center mb-8">
-                  <TabsList className="bg-rich-black/60 p-1 border border-gold/30">
-                    <TabsTrigger 
-                      value="appetizers" 
-                      className="px-8 py-3 data-[state=active]:bg-gold data-[state=active]:text-black font-medium"
-                    >
-                      Appetizers
-                    </TabsTrigger>
-                    <TabsTrigger 
-                      value="entrees"
-                      className="px-8 py-3 data-[state=active]:bg-gold data-[state=active]:text-black font-medium"
-                    >
-                      Entrées
-                    </TabsTrigger>
-                    <TabsTrigger 
-                      value="desserts"
-                      className="px-8 py-3 data-[state=active]:bg-gold data-[state=active]:text-black font-medium"
-                    >
-                      Desserts
-                    </TabsTrigger>
-                  </TabsList>
-                </div>
-
-                <TabsContent value="appetizers" className="p-2">
-                  <div className="mb-6 text-center max-w-3xl mx-auto">
-                    <p className="text-gray-300 mb-3">
-                      Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
-                    </p>
-                    <p className="text-gray-300 italic mb-6">
-                      Minimum order, delivery, and service fee will apply
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-3 mb-8">
-                      <div className="flex items-center gap-2">
-                        <span className="w-3 h-3 rounded-full bg-gold inline-block"></span>
-                        <span className="text-sm text-gray-300">vegan</span>
+            <Tabs defaultValue="hors" className="w-full">
+              <TabsList className="grid w-full md:grid-cols-4 bg-rich-gray border border-gold/30 rounded-lg h-auto">
+                <TabsTrigger value="hors" className="py-3">Hors d'oeuvres</TabsTrigger>
+                <TabsTrigger value="dinner" className="py-3">Plated Dinners</TabsTrigger>
+                <TabsTrigger value="buffet" className="py-3">Buffet</TabsTrigger>
+                <TabsTrigger value="dessert" className="py-3">Desserts</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="hors" className="mt-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                  <div>
+                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Cold Hors d'oeuvres</h3>
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <div className="flex gap-3 mb-4">
+                          <div>
+                            <h4 className="text-xl font-playfair text-white">Passed Canapés</h4>
+                            <p className="text-gold text-sm mt-1">$35 per dozen, minimum 3 dozen per selection</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Miniature crab cakes with lemon aioli</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Seared tuna on wonton crisp with wasabi cream</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Goat cheese and herb tartlets</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Prosciutto-wrapped melon with balsamic glaze</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Deviled eggs with caviar</span>
+                          </li>
+                        </ul>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span className="w-3 h-3 rounded-full bg-gold inline-block"></span>
-                        <span className="text-sm text-gray-300">v-vegetarian</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="w-3 h-3 rounded-full bg-gold inline-block"></span>
-                        <span className="text-sm text-gray-300">gf-gluten-friendly</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="w-3 h-3 rounded-full bg-gold inline-block"></span>
-                        <span className="text-sm text-gray-300">df-dairy-free</span>
+                      
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <div className="flex gap-3 mb-4">
+                          <div>
+                            <h4 className="text-xl font-playfair text-white">Platters & Displays</h4>
+                            <p className="text-gold text-sm mt-1">Priced per person, 25 person minimum</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Artisanal cheese board with dried fruits, nuts, and crackers - $8</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Crudité display with assorted dips - $6</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Charcuterie board with cured meats, pickled vegetables, and mustards - $12</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Seafood display with shrimp, oysters, and crab claws - $18</span>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
+                  
                   <div>
-                    {appetizersMenu.map(category => renderMenuCategory(category))}
+                    <div className="rounded-lg overflow-hidden mb-6">
+                      <img 
+                        src="/lovable-uploads/747a761d-59d8-43a8-8ec3-2e3ef49c85ce.png" 
+                        alt="Elegant wrap appetizers"
+                        className="w-full h-auto object-cover" 
+                      />
+                    </div>
+                    
+                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Hot Hors d'oeuvres</h3>
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <div className="flex gap-3 mb-4">
+                          <div>
+                            <h4 className="text-xl font-playfair text-white">Passed Hot Items</h4>
+                            <p className="text-gold text-sm mt-1">$40 per dozen, minimum 3 dozen per selection</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Bacon-wrapped scallops</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Wild mushroom and goat cheese tartlets</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Lamb lollipops with mint pesto</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Chicken satay with peanut sauce</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Coconut shrimp with sweet chili sauce</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="rounded-lg overflow-hidden mt-6">
+                      <img 
+                        src="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png" 
+                        alt="Charcuterie spread with meats and accompaniments"
+                        className="w-full h-auto object-cover" 
+                      />
+                    </div>
                   </div>
-                </TabsContent>
-                
-                <TabsContent value="entrees" className="p-2">
-                  <div className="mb-6 text-center max-w-3xl mx-auto">
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="dinner" className="mt-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                  <div>
+                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Plated Dinner Menu</h3>
                     <p className="text-gray-300 mb-6">
-                      Our entrée selections showcase the finest ingredients prepared with care by our expert chefs.
+                      Our plated dinners include artisan bread service, a first course, entrée with sides, and coffee & tea service.
+                      Pricing starts at $65 per person.
                     </p>
+                    
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">First Course (select one)</h4>
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Seasonal greens with champagne vinaigrette, shaved parmesan and candied pecans</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Roasted butternut squash soup with creme fraiche and chives</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Heirloom tomato and burrata salad with basil oil and balsamic reduction</span>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Entrées (select two for guests to choose)</h4>
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Herb-crusted beef tenderloin with red wine reduction</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Pan-seared salmon with lemon dill sauce</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Roasted chicken breast with wild mushroom sauce</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Grilled vegetable wellington with tomato coulis (vegetarian)</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
+                  
                   <div>
-                    {entreesMenu.map(category => renderMenuCategory(category))}
+                    <div className="rounded-lg overflow-hidden mb-6">
+                      <img 
+                        src="/lovable-uploads/761d5e81-4b3c-4715-a21e-21626a8406c0.png" 
+                        alt="Gourmet plated dinner with roasted vegetables and quinoa"
+                        className="w-full h-auto object-cover" 
+                      />
+                    </div>
+                    
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Sides (select two)</h4>
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Herb-roasted fingerling potatoes</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Wild rice pilaf with toasted almonds</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Seasonal roasted vegetables</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Creamy parmesan polenta</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Grilled asparagus with lemon zest</span>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Optional Enhancements</h4>
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Intermezzo sorbet course - $4 per person</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Custom wine pairings - starting at $30 per person</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Passed dessert mignardises - $12 per person</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="rounded-lg overflow-hidden mt-6">
+                      <img 
+                        src="/lovable-uploads/8dc5924d-5028-4413-a6f6-c4a9be8acdb3.png" 
+                        alt="Gourmet crostini with rare beef and greens"
+                        className="w-full h-auto object-cover" 
+                      />
+                    </div>
                   </div>
-                </TabsContent>
-                
-                <TabsContent value="desserts" className="p-2">
-                  <div className="mb-6 text-center max-w-3xl mx-auto">
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="buffet" className="mt-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                  <div>
+                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Buffet Menus</h3>
                     <p className="text-gray-300 mb-6">
-                      Complete your dining experience with our exquisite dessert offerings.
+                      Our buffet menus offer elegant yet approachable options that provide variety for your guests.
+                      Pricing starts at $45 per person, 25 person minimum.
                     </p>
+                    
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Classic Buffet</h4>
+                        <p className="text-gold text-sm mb-4">$48 per person</p>
+                        
+                        <h5 className="text-white font-medium mb-2">Salads (select two)</h5>
+                        <ul className="space-y-2 text-gray-300 mb-4">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Classic Caesar salad</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Mixed greens with assorted toppings and dressings</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Mediterranean orzo pasta salad</span>
+                          </li>
+                        </ul>
+                        
+                        <h5 className="text-white font-medium mb-2">Entrées (select two)</h5>
+                        <ul className="space-y-2 text-gray-300 mb-4">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Carved roast beef with horseradish cream</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Herb-roasted chicken</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Grilled salmon with citrus butter</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Vegetable lasagna</span>
+                          </li>
+                        </ul>
+                        
+                        <p className="text-gray-300">Includes artisan rolls, seasonal vegetables, choice of potato or rice, and coffee service</p>
+                      </div>
+                    </div>
                   </div>
+                  
                   <div>
-                    {dessertsMenu.map(category => renderMenuCategory(category))}
+                    <div className="rounded-lg overflow-hidden mb-6">
+                      <img 
+                        src="/lovable-uploads/98b6fe0d-1a31-4839-a54e-e71d9494cf69.png" 
+                        alt="Beautifully arranged catering buffet with salads"
+                        className="w-full h-auto object-cover" 
+                      />
+                    </div>
+                    
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Specialty Themed Buffets</h4>
+                        
+                        <h5 className="text-white font-medium mb-2">Mediterranean Table - $55 per person</h5>
+                        <ul className="space-y-2 text-gray-300 mb-4">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Mezze display with hummus, baba ganoush, olives, and pita</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Greek salad with feta and kalamata olives</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Grilled chicken souvlaki and beef kofta</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Vegetable moussaka</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Lemon rice and roasted vegetables</span>
+                          </li>
+                        </ul>
+                        
+                        <h5 className="text-white font-medium mb-2">Pacific Rim - $58 per person</h5>
+                        <ul className="space-y-2 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Sushi display (California rolls, spicy tuna, vegetable)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Asian slaw with sesame ginger dressing</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Teriyaki glazed salmon</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Korean beef bulgogi</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Stir-fried vegetables and coconut jasmine rice</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="rounded-lg overflow-hidden mt-6">
+                      <img 
+                        src="/lovable-uploads/7422a23e-773e-4ffb-8a7f-2ead0162deb6.png" 
+                        alt="Grilled chicken skewers with glaze"
+                        className="w-full h-auto object-cover" 
+                      />
+                    </div>
                   </div>
-                </TabsContent>
-              </Tabs>
-            </div>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="dessert" className="mt-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                  <div>
+                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Dessert Options</h3>
+                    <p className="text-gray-300 mb-6">
+                      Choose from our chef's selection of sweet endings to complete your event.
+                    </p>
+                    
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Plated Desserts</h4>
+                        <p className="text-gold text-sm mb-4">$12 per person</p>
+                        
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Classic crème brûlée with fresh berries</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Chocolate torte with raspberry coulis</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Seasonal fruit tart with vanilla custard</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>New York cheesecake with berry compote</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Tiramisu with chocolate shavings</span>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Dessert Stations</h4>
+                        <p className="text-gold text-sm mb-4">Priced per person, minimum 40 guests</p>
+                        
+                        <h5 className="text-white font-medium mb-2">Mini Dessert Display - $16 per person</h5>
+                        <p className="text-gray-300 mb-4">
+                          An assortment of bite-sized desserts including macarons, mini cupcakes, 
+                          chocolate-dipped strawberries, and petit fours.
+                        </p>
+                        
+                        <h5 className="text-white font-medium mb-2">S'mores Station - $14 per person</h5>
+                        <p className="text-gray-300 mb-4">
+                          Interactive station with toasted marshmallows, gourmet chocolates, and 
+                          graham crackers with various toppings.
+                        </p>
+                        
+                        <h5 className="text-white font-medium mb-2">Ice Cream & Gelato Bar - $15 per person</h5>
+                        <p className="text-gray-300">
+                          Premium ice creams and gelatos with assorted toppings, sauces, and garnishes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div className="rounded-lg overflow-hidden mb-6">
+                      <img 
+                        src="/lovable-uploads/3e639f14-2b91-41b7-a995-d4ea1c5984b1.png" 
+                        alt="Elegant fruit tarts with berries and kiwi"
+                        className="w-full h-auto object-cover" 
+                      />
+                    </div>
+                    
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Specialty Desserts</h4>
+                        
+                        <h5 className="text-white font-medium mb-2">Wedding Cakes</h5>
+                        <p className="text-gray-300 mb-4">
+                          Custom designed wedding cakes tailored to your style and flavor preferences.
+                          Starting at $9 per slice with consultation required.
+                        </p>
+                        
+                        <h5 className="text-white font-medium mb-2">Dessert Flights - $14 per person</h5>
+                        <p className="text-gray-300 mb-4">
+                          Tasting portions of three complementary desserts, artfully presented.
+                          Perfect for creating a memorable dessert experience.
+                        </p>
+                        
+                        <h5 className="text-white font-medium mb-2">Seasonal Specialties</h5>
+                        <ul className="space-y-2 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Summer: Strawberry shortcake bar</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Fall: Apple cider donuts and caramel station</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Winter: Hot chocolate bar with gourmet marshmallows</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Spring: Lemon dessert display with meringues and tarts</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="rounded-lg overflow-hidden mt-6">
+                      <img 
+                        src="/lovable-uploads/1db4c64d-3219-4445-b1b9-1fbccbb3722f.png" 
+                        alt="Assorted dessert display with macarons and cakes"
+                        className="w-full h-auto object-cover" 
+                      />
+                    </div>
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
             
             <div className="text-center mt-16">
               <p className="text-gray-300 mb-6">
-                This is just a sampling of our offerings. We specialize in custom menus tailored to your specific event and preferences.
+                All menus can be customized to accommodate dietary restrictions and preferences. 
+                Please contact us to discuss your specific needs.
               </p>
-              <Link to="/contact" className="btn-gold">
-                Request Custom Menu
-              </Link>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-20 bg-rich-gray border-y border-gold/20">
-          <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
-                  alt="Customizable Menus" 
-                  className="w-full h-auto rounded-lg shadow-2xl"
-                />
-              </div>
-              <div>
-                <h2 className="section-title">Customizable For Your Event</h2>
-                <div className="space-y-6 text-gray-300">
-                  <p>
-                    Every menu at Morton's Fine Catering is fully customizable to suit your preferences, 
-                    dietary requirements, and event style. Our culinary team works closely with you to 
-                    create a dining experience that perfectly complements your occasion.
-                  </p>
-                  <p>
-                    From elegant plated dinners to interactive food stations, we offer a variety of 
-                    service styles to match the flow and feel of your event. Our expert catering consultants 
-                    can help you select the perfect approach for your unique celebration.
-                  </p>
-                  <p>
-                    We pride ourselves on accommodating dietary restrictions and preferences, ensuring that 
-                    all of your guests enjoy an exceptional dining experience regardless of their needs.
-                  </p>
-                </div>
-                <div className="mt-8">
-                  <Link to="/contact" className="btn-gold">
-                    Schedule a Consultation
-                  </Link>
-                </div>
-              </div>
+              <a href="/contact" className="btn-gold inline-block">Contact Us For Custom Menus</a>
             </div>
           </div>
         </section>
         
         <BookCta 
-          title="Ready to Create Your Custom Menu?"
-          subtitle="Contact our culinary team today to begin designing the perfect menu for your upcoming event."
+          title="Ready to Create a Menu for Your Special Event?"
+          subtitle="Our culinary team would be delighted to create a custom menu tailored specifically to your event and preferences."
+          backgroundImage="/lovable-uploads/71e48cb4-2adb-43b6-a940-f05bd92cfcaf.png"
         />
       </main>
       

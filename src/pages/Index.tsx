@@ -8,6 +8,7 @@ import Hero from '@/components/ui/hero/Hero';
 import FeatureSection from '@/components/ui/feature-section/FeatureSection';
 import { Testimonials } from '@/components/ui/testimonial/Testimonial';
 import BookCta from '@/components/ui/book-cta/BookCta';
+import FoodGallery from '@/components/ui/food-gallery/FoodGallery';
 
 const featuresData = [
   {
@@ -45,6 +46,33 @@ const testimonialData = [
   },
 ];
 
+const foodGalleryImages = [
+  { 
+    src: "/lovable-uploads/4aae84da-3941-4510-8410-850ad17f22eb.png", 
+    alt: "Gourmet tartlet canapés with a decorative tomato rose" 
+  },
+  { 
+    src: "/lovable-uploads/03e7ecfe-8171-442a-9a57-13d490794d4d.png", 
+    alt: "Butternut squash soup shooters" 
+  },
+  { 
+    src: "/lovable-uploads/9d0af1fd-4b6b-4bcd-818a-2c974fbf173f.png", 
+    alt: "Toasted marshmallow dessert sticks" 
+  },
+  { 
+    src: "/lovable-uploads/ac03567f-544c-41c6-840f-bd1fdc004701.png", 
+    alt: "Charcuterie board with prosciutto-wrapped melon and cheese" 
+  },
+  { 
+    src: "/lovable-uploads/3e639f14-2b91-41b7-a995-d4ea1c5984b1.png", 
+    alt: "Fresh fruit tarts with strawberries, kiwi and blueberries" 
+  },
+  { 
+    src: "/lovable-uploads/31f56b24-5898-453e-a799-65fd34f28d2d.png", 
+    alt: "Dessert display with cupcakes, macarons and cake pops" 
+  },
+];
+
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -55,7 +83,7 @@ const Index = () => {
           title="Exceptional Catering for Exceptional Events"
           subtitle="MORTON'S FINE CATERING"
           description="We deliver unforgettable culinary experiences with chef-driven cuisine, impeccable service, and meticulous attention to detail."
-          imageUrl="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          imageUrl="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png"
           ctaText="Contact Us"
           height="min-h-screen"
         />
@@ -83,8 +111,8 @@ const Index = () => {
                 <div className="relative">
                   <div className="absolute -top-6 -left-6 w-full h-full border-2 border-gold rounded-lg"></div>
                   <img 
-                    src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                    alt="Elegant catering setup" 
+                    src="/lovable-uploads/8ad28185-288c-4ed2-a334-861d441f4e83.png" 
+                    alt="Morton's catering chef preparing food" 
                     className="w-full h-auto rounded-lg shadow-2xl"
                   />
                 </div>
@@ -92,6 +120,13 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        <FoodGallery 
+          title="A Taste of Our Cuisine"
+          subtitle="Our culinary team creates dishes that are as beautiful as they are delicious. Here's a sampling of our recent creations."
+          images={foodGalleryImages}
+          className="py-20 bg-rich-black"
+        />
         
         <FeatureSection 
           title="Why Choose Morton's"
@@ -102,6 +137,7 @@ const Index = () => {
         <BookCta 
           title="Ready to Create an Unforgettable Event?"
           subtitle="Let our team of culinary and event professionals bring your vision to life. Contact us today to start planning your perfect occasion."
+          backgroundImage="/lovable-uploads/71e48cb4-2adb-43b6-a940-f05bd92cfcaf.png"
         />
         
         <Testimonials 
