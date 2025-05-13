@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
@@ -693,32 +692,4 @@ const Menus = () => {
                       className="mt-8"
                       compact={true}
                       quote="The dessert station was the highlight of our wedding reception. The mini dessert display was not only beautiful but incredibly delicious. Morton's exceeded our expectations!"
-                      author="Katherine West"
-                      position="Wedding Client, October 2024"
-                    />
-                  </div>
-                </div>
-              </TabsContent>
-            </Tabs>
-            
-            <div className="mt-20">
-              <FoodGallery 
-                title="Menu Gallery"
-                subtitle="Experience Morton's Fine Catering through our visual showcase"
-              />
-            </div>
-          </div>
-        </section>
-        
-        <BookCta 
-          title="Ready to Create Your Menu?" 
-          description="Contact us to start planning your custom catering experience. Our team will work with you to design the perfect menu for your event."
-        />
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
-
-export default Menus;
+                      author
