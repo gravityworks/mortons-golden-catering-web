@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
@@ -5,8 +6,6 @@ import Hero from '@/components/ui/hero/Hero';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import BookCta from '@/components/ui/book-cta/BookCta';
-import Testimonial from '@/components/ui/testimonial/Testimonial';
-import FoodGallery from '@/components/ui/food-gallery/FoodGallery';
 
 const Menus = () => {
   return (
@@ -121,14 +120,6 @@ const Menus = () => {
                         </ul>
                       </div>
                     </div>
-                    
-                    <Testimonial
-                      className="mt-8"
-                      compact={true}
-                      quote="Morton's canapés were the highlight of our corporate event. The seared tuna on wonton crisp received so many compliments from our clients."
-                      author="Sarah Johnson"
-                      position="Event Coordinator, Tech Solutions Inc."
-                    />
                   </div>
                   
                   <div>
@@ -191,14 +182,6 @@ const Menus = () => {
                         className="w-full h-auto object-cover" 
                       />
                     </div>
-                    
-                    <Testimonial
-                      className="mt-8"
-                      compact={true}
-                      quote="The seafood display was absolutely spectacular. Our guests couldn't stop talking about the fresh oysters and jumbo shrimp. Morton's attention to detail is unmatched!"
-                      author="Michael Reynolds"
-                      position="Luxury Wedding Planner"
-                    />
                   </div>
                 </div>
               </TabsContent>
@@ -267,14 +250,6 @@ const Menus = () => {
                         </ul>
                       </div>
                     </div>
-                    
-                    <Testimonial
-                      className="mt-8"
-                      compact={true}
-                      quote="The herb-crusted beef tenderloin was cooked to absolute perfection. Morton's plated dinners were elegant, beautifully presented, and exceeded our expectations."
-                      author="Jennifer & David Martinez"
-                      position="Wedding Clients, May 2025"
-                    />
                   </div>
                   
                   <div>
@@ -355,14 +330,6 @@ const Menus = () => {
                         className="w-full h-auto object-cover" 
                       />
                     </div>
-                    
-                    <Testimonial
-                      className="mt-8"
-                      compact={true}
-                      quote="The seasonal roasted vegetables and herb-roasted fingerling potatoes complemented our entrées perfectly. Every dish was a work of art!"
-                      author="Robert Chen"
-                      position="Non-profit Gala Organizer"
-                    />
                   </div>
                 </div>
               </TabsContent>
@@ -434,14 +401,6 @@ const Menus = () => {
                         <p className="text-gray-300">Includes artisan rolls, seasonal vegetables, choice of potato or rice, and coffee service</p>
                       </div>
                     </div>
-                    
-                    <Testimonial
-                      className="mt-8"
-                      compact={true}
-                      quote="The Mediterranean buffet was a huge hit at our company party! The variety was impressive and accommodated all of our dietary preferences. The mezze display was particularly spectacular."
-                      author="Lisa Thompson"
-                      position="HR Director, Global Innovations"
-                    />
                   </div>
                   
                   <div>
@@ -534,14 +493,6 @@ const Menus = () => {
                         className="w-full h-auto object-cover" 
                       />
                     </div>
-                    
-                    <Testimonial
-                      className="mt-8" 
-                      compact={true}
-                      quote="The Pacific Rim buffet was an absolute crowd-pleaser. The sushi display was beautifully presented, and the Korean beef bulgogi was the best I've ever tasted!"
-                      author="James Wilson"
-                      position="Corporate Events Manager"
-                    />
                   </div>
                 </div>
               </TabsContent>
@@ -615,14 +566,6 @@ const Menus = () => {
                         </p>
                       </div>
                     </div>
-                    
-                    <Testimonial
-                      className="mt-8"
-                      compact={true}
-                      quote="The chocolate torte with raspberry coulis was divine! Our guests were raving about all of Morton's desserts throughout the evening."
-                      author="Emma Rodriguez"
-                      position="Birthday Celebration Client"
-                    />
                   </div>
                   
                   <div>
@@ -687,9 +630,31 @@ const Menus = () => {
                         className="w-full h-auto object-cover" 
                       />
                     </div>
-                    
-                    <Testimonial
-                      className="mt-8"
-                      compact={true}
-                      quote="The dessert station was the highlight of our wedding reception. The mini dessert display was not only beautiful but incredibly delicious. Morton's exceeded our expectations!"
-                      author
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
+            
+            <div className="text-center mt-16">
+              <p className="text-gray-300 mb-6">
+                All menus can be customized to accommodate dietary restrictions and preferences. 
+                Please contact us to discuss your specific needs.
+              </p>
+              <a href="/contact" className="btn-gold inline-block">Contact Us For Custom Menus</a>
+            </div>
+          </div>
+        </section>
+        
+        <BookCta 
+          title="Ready to Create a Menu for Your Special Event?"
+          subtitle="Our culinary team would be delighted to create a custom menu tailored specifically to your event and preferences."
+          backgroundImage="/lovable-uploads/71e48cb4-2adb-43b6-a940-f05bd92cfcaf.png"
+        />
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default Menus;
