@@ -1,8 +1,11 @@
+
 import React from 'react';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import Hero from '@/components/ui/hero/Hero';
 import BookCta from '@/components/ui/book-cta/BookCta';
+import { CircleDot } from 'lucide-react';
+
 const AboutUs = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -75,22 +78,60 @@ const AboutUs = () => {
               </div>
               <div>
                 <h2 className="section-title">Mission & Values</h2>
-                <div className="space-y-6 text-gray-300">
-                  <p>
-                    At Morton's Fine Catering, we believe that exceptional food is the foundation of 
-                    any memorable event. We approach each menu as an opportunity to create a unique 
-                    culinary experience that reflects your personal style and vision.
+                <div className="space-y-8 text-gray-300">
+                  <p className="text-lg">
+                    We're here to serve more than just meals—we serve memories. Our mission is to create customized culinary experiences that reflect your style, exceed your expectations, and leave a lasting impression on everyone who attends.
                   </p>
-                  <p>
-                    Our commitment to quality extends beyond the food to every aspect of our service. 
-                    From the initial consultation to the final cleanup, we pay meticulous attention to 
-                    detail, ensuring that your event unfolds flawlessly and exceeds your expectations.
-                  </p>
-                  <p>
-                    We are proud to be a trusted partner for life's most important occasions, and we 
-                    take that responsibility seriously. Our team works tirelessly to create experiences 
-                    that leave lasting impressions and bring your vision to life.
-                  </p>
+                  
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center text-white">
+                          <CircleDot className="h-5 w-5" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Hospitality First</h3>
+                        <p>Every guest deserves to feel welcome, well-fed, and cared for.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center text-white">
+                          <CircleDot className="h-5 w-5" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Culinary Excellence</h3>
+                        <p>We never cut corners. Our ingredients are fresh, our flavors bold, and our standards high.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center text-white">
+                          <CircleDot className="h-5 w-5" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Community Connection</h3>
+                        <p>As a locally owned business, we're proud to support local farms, vendors, and events.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="bg-indigo-600 w-8 h-8 rounded-full flex items-center justify-center text-white">
+                          <CircleDot className="h-5 w-5" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Sustainability</h3>
+                        <p>From composting kitchen waste to using eco-friendly packaging, we work to reduce our footprint.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
