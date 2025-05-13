@@ -43,7 +43,6 @@ const Navbar = () => {
           <Link to="/about-us" className="text-white nav-link">About Us</Link>
           <Link to="/services" className="text-white nav-link">Services</Link>
           <Link to="/menus" className="text-white nav-link">Menus</Link>
-          <Link to="/contact" className="text-white nav-link">Contact</Link>
           <Link to="/contact">
             <Button className="btn-gold">Contact Us</Button>
           </Link>
@@ -67,7 +66,6 @@ const Navbar = () => {
             <Link to="/about-us" className="text-white nav-link text-lg" onClick={toggleMenu}>About Us</Link>
             <Link to="/services" className="text-white nav-link text-lg" onClick={toggleMenu}>Services</Link>
             <Link to="/menus" className="text-white nav-link text-lg" onClick={toggleMenu}>Menus</Link>
-            <Link to="/contact" className="text-white nav-link text-lg" onClick={toggleMenu}>Contact</Link>
             <Link to="/contact" onClick={toggleMenu}>
               <Button className="btn-gold w-full">Contact Us</Button>
             </Link>
