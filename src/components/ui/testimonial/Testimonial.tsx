@@ -6,18 +6,27 @@ type TestimonialProps = {
   author: string;
   position?: string;
   imageUrl?: string;
+  className?: string;
+  compact?: boolean;
 };
 
-const Testimonial = ({ quote, author, position, imageUrl }: TestimonialProps) => {
+const Testimonial = ({ 
+  quote, 
+  author, 
+  position, 
+  imageUrl,
+  className = '',
+  compact = false
+}: TestimonialProps) => {
   return (
-    <div className="bg-rich-gray p-8 rounded-lg border border-gray-800">
+    <div className={`bg-rich-gray p-8 rounded-lg border border-gray-800 ${className}`}>
       <div className="flex flex-col h-full">
-        <div className="mb-6 text-gold">
+        <div className={`${compact ? 'mb-4' : 'mb-6'} text-gold`}>
           {/* Quote icon */}
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
-            width="48" 
-            height="48" 
+            width={compact ? "32" : "48"} 
+            height={compact ? "32" : "48"} 
             viewBox="0 0 24 24" 
             fill="none" 
             stroke="currentColor" 
@@ -30,12 +39,16 @@ const Testimonial = ({ quote, author, position, imageUrl }: TestimonialProps) =>
           </svg>
         </div>
         
-        <p className="text-white text-lg italic mb-6 flex-grow">"{quote}"</p>
+        <p className={`text-white ${compact ? 'text-base' : 'text-lg'} italic mb-6 flex-grow`}>"{quote}"</p>
         
         <div className="flex items-center">
           {imageUrl && (
             <div className="mr-4">
-              <img src={imageUrl} alt={author} className="w-12 h-12 rounded-full object-cover" />
+              <img 
+                src={imageUrl} 
+                alt={author} 
+                className={`${compact ? 'w-10 h-10' : 'w-12 h-12'} rounded-full object-cover`} 
+              />
             </div>
           )}
           <div>
