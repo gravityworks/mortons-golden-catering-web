@@ -56,7 +56,7 @@ const Index = () => {
           subtitle="MORTON'S FINE CATERING"
           description="We deliver unforgettable culinary experiences with chef-driven cuisine, impeccable service, and meticulous attention to detail."
           imageUrl="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          ctaText="Book Your Event"
+          ctaText="Contact Us"
           height="min-h-screen"
         />
         

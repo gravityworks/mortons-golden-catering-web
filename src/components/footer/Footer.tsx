@@ -63,7 +63,7 @@ const Footer = () => {
             </ul>
             <div className="mt-6">
               <Link to="/contact" className="btn-gold inline-block">
-                Book Us
+                Contact Us
               </Link>
             </div>
           </div>
