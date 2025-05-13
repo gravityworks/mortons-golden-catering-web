@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Logo from '@/components/ui/logo/Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,11 +35,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container-custom flex justify-between items-center">
-        <Link to="/" className="flex items-center">
-          <h1 className="text-2xl font-playfair font-bold text-white">
-            <span className="text-gold">Morton's</span> Fine Catering
-          </h1>
-        </Link>
+        <Logo width={scrolled ? 120 : 140} />
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
