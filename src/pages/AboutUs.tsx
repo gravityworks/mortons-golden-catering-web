@@ -4,7 +4,6 @@ import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import Hero from '@/components/ui/hero/Hero';
 import BookCta from '@/components/ui/book-cta/BookCta';
-import { CircleDot } from 'lucide-react';
 
 const AboutUs = () => {
   return <div className="min-h-screen flex flex-col">
@@ -85,10 +84,8 @@ const AboutUs = () => {
                   
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 mt-1">
-                        <div className="bg-gold w-8 h-8 rounded-full flex items-center justify-center text-white">
-                          <CircleDot className="h-5 w-5" />
-                        </div>
+                      <div className="flex-shrink-0 mt-1.5">
+                        <div className="bg-gold w-4 h-4 rounded-full"></div>
                       </div>
                       <div>
                         <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Hospitality First</h3>
@@ -97,10 +94,8 @@ const AboutUs = () => {
                     </div>
                     
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 mt-1">
-                        <div className="bg-gold w-8 h-8 rounded-full flex items-center justify-center text-white">
-                          <CircleDot className="h-5 w-5" />
-                        </div>
+                      <div className="flex-shrink-0 mt-1.5">
+                        <div className="bg-gold w-4 h-4 rounded-full"></div>
                       </div>
                       <div>
                         <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Culinary Excellence</h3>
@@ -109,10 +104,8 @@ const AboutUs = () => {
                     </div>
                     
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 mt-1">
-                        <div className="bg-gold w-8 h-8 rounded-full flex items-center justify-center text-white">
-                          <CircleDot className="h-5 w-5" />
-                        </div>
+                      <div className="flex-shrink-0 mt-1.5">
+                        <div className="bg-gold w-4 h-4 rounded-full"></div>
                       </div>
                       <div>
                         <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Community Connection</h3>
@@ -121,10 +114,8 @@ const AboutUs = () => {
                     </div>
                     
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 mt-1">
-                        <div className="bg-gold w-8 h-8 rounded-full flex items-center justify-center text-white">
-                          <CircleDot className="h-5 w-5" />
-                        </div>
+                      <div className="flex-shrink-0 mt-1.5">
+                        <div className="bg-gold w-4 h-4 rounded-full"></div>
                       </div>
                       <div>
                         <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Sustainability</h3>
