@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cake, Briefcase, Users, Gift, Coffee, Silverware, GlassWater, Table, Calendar } from 'lucide-react';
+import { Cake, Briefcase, Users, Gift, Coffee, Utensils, GlassWater, Table, Calendar } from 'lucide-react';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import Hero from '@/components/ui/hero/Hero';
@@ -121,7 +121,7 @@ const Services = () => {
               <Card className="bg-rich-gray border-gray-800 hover:border-gold/30 transition-all duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <Silverware className="h-6 w-6 text-gold" />
+                    <Utensils className="h-6 w-6 text-gold" />
                     <CardTitle className="text-white text-xl">Silverware</CardTitle>
                   </div>
                 </CardHeader>
