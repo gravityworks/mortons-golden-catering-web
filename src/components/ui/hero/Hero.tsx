@@ -6,7 +6,7 @@ type HeroProps = {
   title: string;
   subtitle?: string;
   description?: string;
-  imageUrl: string;
+  imageUrl?: string;
   ctaText?: string;
   ctaLink?: string;
   height?: string;
@@ -17,7 +17,7 @@ const Hero = ({
   title,
   subtitle,
   description,
-  imageUrl,
+  imageUrl = "https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   ctaText,
   ctaLink = "/contact",
   height = "h-screen",

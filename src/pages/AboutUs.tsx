@@ -14,7 +14,7 @@ const AboutUs = () => {
         <Hero 
           title="Our Story"
           subtitle="ABOUT MORTON'S FINE CATERING"
-          imageUrl="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
+          imageUrl="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           height="min-h-[60vh]"
         />
         
@@ -47,8 +47,8 @@ const AboutUs = () => {
               <div className="relative">
                 <div className="absolute -top-6 -left-6 w-full h-full border-2 border-gold rounded-lg"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
-                  alt="Chef preparing food" 
+                  src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                  alt="Elegant catering setup" 
                   className="w-full h-auto rounded-lg shadow-2xl"
                 />
               </div>
@@ -65,7 +65,7 @@ const AboutUs = () => {
               <div className="text-center">
                 <div className="mb-6 overflow-hidden rounded-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
+                    src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                     alt="William Morton" 
                     className="w-full h-80 object-cover transition-transform duration-500 hover:scale-105"
                   />
@@ -82,7 +82,7 @@ const AboutUs = () => {
               <div className="text-center">
                 <div className="mb-6 overflow-hidden rounded-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
+                    src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                     alt="Sophia Chen" 
                     className="w-full h-80 object-cover transition-transform duration-500 hover:scale-105"
                   />
@@ -99,7 +99,7 @@ const AboutUs = () => {
               <div className="text-center">
                 <div className="mb-6 overflow-hidden rounded-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
+                    src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                     alt="Marcus Johnson" 
                     className="w-full h-80 object-cover transition-transform duration-500 hover:scale-105"
                   />
@@ -120,7 +120,7 @@ const AboutUs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
+                  src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                   alt="Our Philosophy" 
                   className="w-full h-auto rounded-lg shadow-2xl"
                 />

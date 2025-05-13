@@ -55,7 +55,7 @@ const Index = () => {
           title="Exceptional Catering for Exceptional Events"
           subtitle="MORTON'S FINE CATERING"
           description="We deliver unforgettable culinary experiences with chef-driven cuisine, impeccable service, and meticulous attention to detail."
-          imageUrl="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
+          imageUrl="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           ctaText="Book Your Event"
           height="min-h-screen"
         />
@@ -83,8 +83,8 @@ const Index = () => {
                 <div className="relative">
                   <div className="absolute -top-6 -left-6 w-full h-full border-2 border-gold rounded-lg"></div>
                   <img 
-                    src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
-                    alt="Chef preparing food" 
+                    src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                    alt="Elegant catering setup" 
                     className="w-full h-auto rounded-lg shadow-2xl"
                   />
                 </div>

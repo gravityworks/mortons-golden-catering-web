@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/navbar/Navbar';
@@ -23,7 +24,7 @@ const menuItems: MenuItem[] = [
     name: "Herb-Crusted Filet Mignon",
     description: "Prime beef tenderloin with herb crust, served with truffle mashed potatoes and seasonal vegetables",
     price: "$45 per person",
-    imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+    imageUrl: "https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     categories: ['wedding', 'corporate'],
     featured: true,
   },
@@ -31,7 +32,7 @@ const menuItems: MenuItem[] = [
     name: "Seared Sea Bass",
     description: "Fresh sea bass with lemon beurre blanc, wild rice pilaf, and grilled asparagus",
     price: "$42 per person",
-    imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+    imageUrl: "https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     categories: ['wedding', 'corporate', 'campus'],
     featured: true,
   },

@@ -13,7 +13,7 @@ type BookCtaProps = {
 const BookCta = ({
   title,
   subtitle,
-  backgroundImage = "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+  backgroundImage = "https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   ctaText = "Book Your Event",
   ctaLink = "/contact",
 }: BookCtaProps) => {
