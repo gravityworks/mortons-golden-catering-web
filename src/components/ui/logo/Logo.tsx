@@ -11,7 +11,7 @@ const Logo: React.FC<LogoProps> = ({ className = '', width = 180 }) => {
   return (
     <Link to="/" className={`block ${className}`}>
       <img 
-        src="/lovable-uploads/ef18f492-1e2e-43a4-8a10-c3bf44f62251.png" 
+        src="/lovable-uploads/91b7d4c4-b0a4-4909-98d3-5e5b6994aa7f.png" 
         alt="Morton's Fine Catering" 
         width={width} 
         height="auto"
