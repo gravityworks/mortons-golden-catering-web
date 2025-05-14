@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
@@ -5,7 +6,7 @@ import Logo from '@/components/ui/logo/Logo';
 const Footer = () => {
   return <footer className="bg-rich-black border-t border-gold/30 pt-16 pb-8">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Company Info */}
           <div>
             <div className="mb-6">
@@ -23,18 +24,6 @@ const Footer = () => {
               <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Services</Link></li>
               <li><Link to="/menus" className="text-gray-300 hover:text-gold transition-colors">Menus</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-gold transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-xl font-playfair font-semibold text-white mb-6">Our Services</h3>
-            <ul className="space-y-3">
-              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Off-Premises Catering</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Rentals</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Staffing</Link></li>
-              <li><Link to="/menus" className="text-gray-300 hover:text-gold transition-colors">Customized Menus</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-gold transition-colors">Event Planning</Link></li>
             </ul>
           </div>
 
