@@ -82,7 +82,7 @@ const Index = () => {
         <Hero 
           title="Exceptional Catering for Exceptional Events"
           subtitle="MORTON'S FINE CATERING"
-          description="We deliver unforgettable culinary experiences with chef-driven cuisine, impeccable service, and meticulous attention to detail throughout the Greater Lansing, Michigan area."
+          description="From weddings to corporate gatherings, we serve Greater Lansing with chef-crafted cuisine, flawless service, and attention to every detail."
           imageUrl="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png"
           ctaText="Contact Us"
           height="min-h-screen"
