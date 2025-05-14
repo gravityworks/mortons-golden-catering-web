@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Cake, Briefcase, Users, Gift, Coffee, Utensils, GlassWater, Table, Calendar } from 'lucide-react';
 import Navbar from '@/components/navbar/Navbar';
@@ -55,8 +56,8 @@ const Services = () => {
               </div>
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1470024646345-85f82436fbb4" 
-                  alt="Wedding Catering" 
+                  src="/lovable-uploads/365b125b-bd32-4a64-a988-873a3727e69b.png" 
+                  alt="Wedding table decoration with Mr & Mrs signs and floral arrangements" 
                   className="w-full h-auto rounded-lg shadow-2xl object-cover"
                 />
               </div>
