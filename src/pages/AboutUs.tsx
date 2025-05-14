@@ -18,8 +18,8 @@ const AboutUs = () => {
               <div>
                 <h2 className="section-title">A Heritage of Excellence</h2>
                 <div className="space-y-6 text-gray-300">
-                  <p>What started as a few small events for friends and family quickly grew into one of Lansing's most trusted names in catering. Over the years, we've served weddings, corporate galas, backyard gatherings, and everything in between—always with the same care, creativity, and commitment to quality.</p>
-                  <p>We believe that every event is an opportunity to make someone's day. Whether we're plating an elegant five-course dinner or delivering a crowd-pleasing buffet, our focus is always the same: fresh ingredients, flawless presentation, and service that goes above and beyond.</p>
+                  <p>What started as a few small events for friends and family quickly grew into one of Greater Lansing's most trusted names in catering. Over the years, we've served weddings, corporate galas, backyard gatherings, and everything in between throughout Michigan's capital region—always with the same care, creativity, and commitment to quality.</p>
+                  <p>We believe that every event is an opportunity to make someone's day. Whether we're plating an elegant five-course dinner or delivering a crowd-pleasing buffet, our focus is always the same: fresh ingredients, flawless presentation, and service that goes above and beyond for our Greater Lansing clients.</p>
                   
                 </div>
               </div>
@@ -43,7 +43,7 @@ const AboutUs = () => {
                 </div>
                 <h3 className="text-2xl font-playfair font-semibold text-white mb-2">Beth Morton</h3>
                 <p className="text-gold mb-4">Owner & Executive Chef</p>
-                <p className="text-gray-300">Trained in both fine dining and comfort food, bringing over 15 years of culinary experience to the table.</p>
+                <p className="text-gray-300">Trained in both fine dining and comfort food, bringing over 15 years of culinary experience to Greater Lansing's catering scene.</p>
               </div>
               
               {/* Team Member 2 */}
@@ -63,7 +63,7 @@ const AboutUs = () => {
                 </div>
                 <h3 className="text-2xl font-playfair font-semibold text-white mb-2">Catering Team</h3>
                 <p className="text-gold mb-4">Service Staff</p>
-                <p className="text-gray-300">Our seasoned team of prep cooks, servers, and bartenders who bring every event to life.</p>
+                <p className="text-gray-300">Our seasoned team of prep cooks, servers, and bartenders who bring every event to life across the Greater Lansing area.</p>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ const AboutUs = () => {
                 <h2 className="section-title">Mission & Values</h2>
                 <div className="space-y-8 text-gray-300">
                   <p className="text-lg">
-                    We're here to serve more than just meals—we serve memories. Our mission is to create customized culinary experiences that reflect your style, exceed your expectations, and leave a lasting impression on everyone who attends.
+                    We're here to serve more than just meals—we serve memories. Our mission is to create customized culinary experiences that reflect your style, exceed your expectations, and leave a lasting impression on everyone who attends your Greater Lansing event.
                   </p>
                   
                   <div className="space-y-6">
@@ -109,7 +109,7 @@ const AboutUs = () => {
                       </div>
                       <div>
                         <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Community Connection</h3>
-                        <p>As a locally owned business, we're proud to support local farms, vendors, and events.</p>
+                        <p>As a locally owned business, we're proud to support Greater Lansing farms, vendors, and events.</p>
                       </div>
                     </div>
                     
@@ -119,7 +119,7 @@ const AboutUs = () => {
                       </div>
                       <div>
                         <h3 className="text-xl font-playfair font-semibold text-gold mb-2">Sustainability</h3>
-                        <p>From composting kitchen waste to using eco-friendly packaging, we work to reduce our footprint.</p>
+                        <p>From composting kitchen waste to using eco-friendly packaging, we work to reduce our footprint throughout Michigan's capital region.</p>
                       </div>
                     </div>
                   </div>
@@ -129,7 +129,7 @@ const AboutUs = () => {
           </div>
         </section>
         
-        <BookCta title="Experience the Morton's Difference" subtitle="Let our team of experienced professionals create an unforgettable culinary experience for your next event." />
+        <BookCta title="Experience the Morton's Difference" subtitle="Let our team of experienced professionals create an unforgettable culinary experience for your next Greater Lansing event." />
       </main>
       
       <Footer />

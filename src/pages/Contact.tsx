@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Navbar from '@/components/navbar/Navbar';
@@ -28,8 +29,8 @@ const Contact = () => {
               <div>
                 <h2 className="section-title">Get In Touch</h2>
                 <p className="text-gray-300 mb-10">
-                  Whether you're planning a wedding, corporate function, or campus event, our team is ready 
-                  to help you create an exceptional culinary experience. Complete the form below or reach out 
+                  Whether you're planning a wedding, corporate function, or campus event in the Greater Lansing area, 
+                  our team is ready to help you create an exceptional culinary experience. Complete the form below or reach out 
                   directly, and we'll respond promptly to discuss your needs.
                 </p>
                 
@@ -39,7 +40,7 @@ const Contact = () => {
                     <div>
                       <h3 className="text-xl font-playfair font-semibold text-white mb-1">Call Us</h3>
                       <p className="text-gray-300">517-339-7255</p>
-                      <p className="text-gray-500 text-sm">Monday-Friday, 9am-5pm PT</p>
+                      <p className="text-gray-500 text-sm">Monday-Friday, 9am-5pm ET</p>
                     </div>
                   </div>
                   
@@ -57,14 +58,15 @@ const Contact = () => {
                     <div>
                       <h3 className="text-xl font-playfair font-semibold text-white mb-1">Our Address</h3>
                       <p className="text-gray-300">2405 E Michigan Ave</p>
-                      <p className="text-gray-300"> Lansing, MI 48912</p>
+                      <p className="text-gray-300">Lansing, MI 48912</p>
+                      <p className="text-gray-300">Proudly serving the Greater Lansing area</p>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div className="bg-rich-gray p-8 rounded-lg border border-gold/20">
-                <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Book Your Event</h3>
+                <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Book Your Greater Lansing Event</h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -144,7 +146,7 @@ const Contact = () => {
                 <h3 className="text-xl font-playfair font-semibold text-white mb-4">How far in advance should I book your services?</h3>
                 <p className="text-gray-300">
                   We recommend booking at least 3-6 months in advance for larger events like weddings, 
-                  and 2-4 weeks for smaller corporate functions, depending on the season.
+                  and 2-4 weeks for smaller corporate functions, depending on the season. Our calendar fills quickly for Greater Lansing events.
                 </p>
               </div>
               
@@ -176,15 +178,15 @@ const Contact = () => {
                 <h3 className="text-xl font-playfair font-semibold text-white mb-4">Do you provide bar service and alcohol?</h3>
                 <p className="text-gray-300">
                   Yes, we offer full bar service including bartenders. Depending on your location and licensing 
-                  requirements, we can either provide alcohol or work with your purchased beverages.
+                  requirements, we can either provide alcohol or work with your purchased beverages throughout the Greater Lansing region.
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-playfair font-semibold text-white mb-4">What is your cancellation policy?</h3>
+                <h3 className="text-xl font-playfair font-semibold text-white mb-4">What areas do you serve?</h3>
                 <p className="text-gray-300">
-                  Our cancellation policy varies depending on the event size and timing. Details are outlined 
-                  in your contract, but generally deposits are non-refundable within 60 days of the event.
+                  We primarily serve the Greater Lansing area, including East Lansing, Okemos, Haslett, DeWitt, Grand Ledge, 
+                  and surrounding communities in Mid-Michigan. For events outside our standard service area, additional travel fees may apply.
                 </p>
               </div>
             </div>

@@ -82,7 +82,7 @@ const Index = () => {
         <Hero 
           title="Exceptional Catering for Exceptional Events"
           subtitle="MORTON'S FINE CATERING"
-          description="We deliver unforgettable culinary experiences with chef-driven cuisine, impeccable service, and meticulous attention to detail."
+          description="We deliver unforgettable culinary experiences with chef-driven cuisine, impeccable service, and meticulous attention to detail throughout the Greater Lansing, Michigan area."
           imageUrl="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png"
           ctaText="Contact Us"
           height="min-h-screen"
@@ -95,7 +95,7 @@ const Index = () => {
                 <h2 className="section-title">Crafting Memorable Experiences Since 1995</h2>
                 <p className="text-gray-300 mb-8">
                   Morton's Fine Catering specializes in delivering exceptional off-premises catering
-                  for weddings, corporate events, and campus functions throughout the region.
+                  for weddings, corporate events, and campus functions throughout the Greater Lansing area.
                 </p>
                 <p className="text-gray-300 mb-8">
                   Our approach combines culinary excellence with personalized service, ensuring that
@@ -123,20 +123,20 @@ const Index = () => {
         
         <FoodGallery 
           title="A Taste of Our Cuisine"
-          subtitle="Our culinary team creates dishes that are as beautiful as they are delicious. Here's a sampling of our recent creations."
+          subtitle="Our culinary team creates dishes that are as beautiful as they are delicious. Here's a sampling of our recent creations served throughout Greater Lansing."
           images={foodGalleryImages}
           className="py-20 bg-rich-black"
         />
         
         <FeatureSection 
           title="Why Choose Morton's"
-          subtitle="We pride ourselves on creating memorable culinary experiences for every client, with a focus on quality, service, and presentation."
+          subtitle="We pride ourselves on creating memorable culinary experiences for every client in the Greater Lansing area, with a focus on quality, service, and presentation."
           features={featuresData}
         />
         
         <BookCta 
           title="Ready to Create an Unforgettable Event?"
-          subtitle="Let our team of culinary and event professionals bring your vision to life. Contact us today to start planning your perfect occasion."
+          subtitle="Let our team of culinary and event professionals bring your vision to life in Greater Lansing, Michigan. Contact us today to start planning your perfect occasion."
           backgroundImage="/lovable-uploads/71e48cb4-2adb-43b6-a940-f05bd92cfcaf.png"
         />
         
