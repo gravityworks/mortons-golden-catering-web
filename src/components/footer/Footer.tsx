@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Logo from '@/components/ui/logo/Logo';
-
 const Footer = () => {
-  return (
-    <footer className="bg-rich-black border-t border-gold/30 pt-16 pb-8">
+  return <footer className="bg-rich-black border-t border-gold/30 pt-16 pb-8">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
@@ -14,10 +11,7 @@ const Footer = () => {
             <div className="mb-6">
               <Logo width={160} />
             </div>
-            <p className="text-gray-300 mb-4">
-              Providing exceptional catering services for weddings, corporate events, and campus functions
-              with chef-driven cuisine that blends classic comfort with creative innovation.
-            </p>
+            <p className="text-gray-300 mb-4">Providing exceptional catering services with chef-driven cuisine that blends classic comfort with creative innovation.</p>
           </div>
 
           {/* Quick Links */}
@@ -76,8 +70,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
