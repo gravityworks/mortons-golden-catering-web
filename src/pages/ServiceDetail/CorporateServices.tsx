@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/navbar/Navbar';
@@ -111,13 +112,6 @@ const CorporateServices = () => {
                 <p className="text-gray-300">
                   Make your holiday parties, milestones, and team-building events memorable 
                   with customized menus and service.
-                </p>
-              </div>
-              <div className="bg-rich-black p-6 rounded-lg border border-gray-800 hover:border-gold/30 transition-all duration-300">
-                <h3 className="text-xl font-playfair font-semibold text-gold mb-4">Boxed Meals</h3>
-                <p className="text-gray-300">
-                  Individually packaged meals that don't sacrifice quality or presentation, 
-                  perfect for distanced gatherings.
                 </p>
               </div>
             </div>
