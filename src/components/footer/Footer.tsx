@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import Logo from '@/components/ui/logo/Logo';
+
 const Footer = () => {
   return <footer className="bg-rich-black border-t border-gold/30 pt-16 pb-8">
       <div className="container-custom">
@@ -13,6 +14,28 @@ const Footer = () => {
               <Logo width={160} />
             </div>
             <p className="text-gray-300 mb-4">Providing exceptional catering services with chef-driven cuisine that blends classic comfort with creative innovation.</p>
+            
+            {/* Social Media Icons */}
+            <div className="flex space-x-4 mt-6">
+              <a 
+                href="https://www.facebook.com/MortonsFineCatering/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-gold transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={24} />
+              </a>
+              <a 
+                href="https://www.instagram.com/mortonsfinecatering/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-gold transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -61,4 +84,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
