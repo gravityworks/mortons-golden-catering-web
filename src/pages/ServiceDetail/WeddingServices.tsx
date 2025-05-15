@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/navbar/Navbar';
@@ -8,79 +7,48 @@ import { Testimonials } from '@/components/ui/testimonial/Testimonial';
 import FoodGallery from '@/components/ui/food-gallery/FoodGallery';
 import BookCta from '@/components/ui/book-cta/BookCta';
 import { Button } from '@/components/ui/button';
-
 const WeddingServices = () => {
-  const featuredVenues = [
-    "Old Town Marquee",
-    "Grand Loft in Grand Ledge",
-    "Grand Ledge Opera House",
-    "GLAR Ballroom",
-    "MSU Horticultural Gardens",
-    "Grand Ledge Country Club",
-    "Woldumar Nature Center"
-  ];
-
-  const weddingTestimonials = [
-    {
-      quote: "Morton's catered our wedding last summer and the food was absolutely incredible. Our guests are still talking about it months later. Their staff was professional and attentive throughout the entire event.",
-      author: "Sarah & Michael",
-      position: "Lansing, MI",
-      imageUrl: "https://images.unsplash.com/photo-1532463788086-56a492a0b34a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200"
-    },
-    {
-      quote: "Working with Morton's for our wedding was the best decision we made. The tasting experience was amazing, and they worked within our budget to create a custom menu that perfectly matched our vision.",
-      author: "Jennifer & David",
-      position: "East Lansing, MI",
-      imageUrl: "https://images.unsplash.com/photo-1565128303599-278b285f4246?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200"
-    },
-    {
-      quote: "The food at our wedding was outstanding! Morton's team was professional, organized, and went above and beyond to make our day special. I'd recommend them to anyone planning a wedding in Greater Lansing.",
-      author: "Emily & Jason",
-      position: "Grand Ledge, MI",
-      imageUrl: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200"
-    }
-  ];
-
-  const weddingGalleryImages = [
-    {
-      src: "/lovable-uploads/365b125b-bd32-4a64-a988-873a3727e69b.png", 
-      alt: "Wedding table setup with decorations"
-    },
-    {
-      src: "/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png", 
-      alt: "Wedding reception with elegant table settings"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed", 
-      alt: "Wedding cake display"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3", 
-      alt: "Elegant wedding dinner setting"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1510076857177-7470076d4098", 
-      alt: "Wedding cocktail hour"
-    },
-    {
-      src: "/lovable-uploads/4aae84da-3941-4510-8410-850ad17f22eb.png", 
-      alt: "Wedding menu showcase"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  const featuredVenues = ["Old Town Marquee", "Grand Loft in Grand Ledge", "Grand Ledge Opera House", "GLAR Ballroom", "MSU Horticultural Gardens", "Grand Ledge Country Club", "Woldumar Nature Center"];
+  const weddingTestimonials = [{
+    quote: "Morton's catered our wedding last summer and the food was absolutely incredible. Our guests are still talking about it months later. Their staff was professional and attentive throughout the entire event.",
+    author: "Sarah & Michael",
+    position: "Lansing, MI",
+    imageUrl: "https://images.unsplash.com/photo-1532463788086-56a492a0b34a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200"
+  }, {
+    quote: "Working with Morton's for our wedding was the best decision we made. The tasting experience was amazing, and they worked within our budget to create a custom menu that perfectly matched our vision.",
+    author: "Jennifer & David",
+    position: "East Lansing, MI",
+    imageUrl: "https://images.unsplash.com/photo-1565128303599-278b285f4246?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200"
+  }, {
+    quote: "The food at our wedding was outstanding! Morton's team was professional, organized, and went above and beyond to make our day special. I'd recommend them to anyone planning a wedding in Greater Lansing.",
+    author: "Emily & Jason",
+    position: "Grand Ledge, MI",
+    imageUrl: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200"
+  }];
+  const weddingGalleryImages = [{
+    src: "/lovable-uploads/365b125b-bd32-4a64-a988-873a3727e69b.png",
+    alt: "Wedding table setup with decorations"
+  }, {
+    src: "/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png",
+    alt: "Wedding reception with elegant table settings"
+  }, {
+    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
+    alt: "Wedding cake display"
+  }, {
+    src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3",
+    alt: "Elegant wedding dinner setting"
+  }, {
+    src: "https://images.unsplash.com/photo-1510076857177-7470076d4098",
+    alt: "Wedding cocktail hour"
+  }, {
+    src: "/lovable-uploads/4aae84da-3941-4510-8410-850ad17f22eb.png",
+    alt: "Wedding menu showcase"
+  }];
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-grow">
-        <Hero 
-          title="Wedding Catering Services"
-          subtitle="MORTON'S FINE CATERING"
-          description="Making your special day unforgettable with exquisite cuisine and impeccable service throughout Greater Lansing, Michigan."
-          imageUrl="/lovable-uploads/365b125b-bd32-4a64-a988-873a3727e69b.png"
-          height="min-h-[70vh]"
-          overlay={true}
-        />
+        <Hero title="Wedding Catering Services" subtitle="MORTON'S FINE CATERING" description="Making your special day unforgettable with exquisite cuisine and impeccable service throughout Greater Lansing, Michigan." imageUrl="/lovable-uploads/365b125b-bd32-4a64-a988-873a3727e69b.png" height="min-h-[70vh]" overlay={true} />
         
         <section className="py-16 bg-rich-black">
           <div className="container-custom">
@@ -97,11 +65,7 @@ const WeddingServices = () => {
                   Our wedding catering packages include custom menu creation, professional staff, bar services, 
                   and all the details that transform a meal into a cherished memory.
                 </p>
-                <p>
-                  Serving Greater Lansing and the surrounding Michigan communities, we pride ourselves on 
-                  using fresh, locally-sourced ingredients whenever possible to create dishes that will 
-                  delight you and your guests.
-                </p>
+                
                 <div className="flex justify-center mt-10">
                   <Button asChild variant="default" className="bg-gold hover:bg-gold/90 text-black">
                     <Link to="/menus">
@@ -164,12 +128,7 @@ const WeddingServices = () => {
           </div>
         </section>
         
-        <FoodGallery 
-          className="py-16 bg-rich-black"
-          title="Wedding Catering Gallery"
-          subtitle="Glimpses of our wedding catering services across Greater Lansing"
-          images={weddingGalleryImages}
-        />
+        <FoodGallery className="py-16 bg-rich-black" title="Wedding Catering Gallery" subtitle="Glimpses of our wedding catering services across Greater Lansing" images={weddingGalleryImages} />
         
         <section className="py-16 bg-rich-gray border-y border-gold/20">
           <div className="container-custom">
@@ -181,14 +140,9 @@ const WeddingServices = () => {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {featuredVenues.map((venue, index) => (
-                <div 
-                  key={index}
-                  className="bg-rich-black p-4 rounded-lg border border-gray-800 hover:border-gold/30 transition-all duration-300 text-center"
-                >
+              {featuredVenues.map((venue, index) => <div key={index} className="bg-rich-black p-4 rounded-lg border border-gray-800 hover:border-gold/30 transition-all duration-300 text-center">
                   <p className="text-white font-medium">{venue}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
             
             <p className="text-gray-400 text-center mt-6 text-sm">
@@ -197,11 +151,7 @@ const WeddingServices = () => {
           </div>
         </section>
         
-        <Testimonials 
-          title="What Couples Say About Us"
-          subtitle="Hear from couples who chose Morton's Fine Catering for their special day"
-          testimonials={weddingTestimonials}
-        />
+        <Testimonials title="What Couples Say About Us" subtitle="Hear from couples who chose Morton's Fine Catering for their special day" testimonials={weddingTestimonials} />
         
         <section className="py-16 bg-rich-gray">
           <div className="container-custom text-center">
@@ -212,18 +162,12 @@ const WeddingServices = () => {
               Contact us today to schedule a consultation and tasting. Let's create a 
               memorable dining experience for your special day in Greater Lansing.
             </p>
-            <BookCta 
-              title=""
-              ctaText="Contact Us"
-              subtitle=""
-            />
+            <BookCta title="" ctaText="Contact Us" subtitle="" />
           </div>
         </section>
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default WeddingServices;
