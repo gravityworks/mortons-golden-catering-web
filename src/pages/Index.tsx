@@ -64,7 +64,7 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
               <div className="order-2 md:order-1">
                 <h2 className="section-title">Crafting Memorable Experiences Since 1995</h2>
-                <p className="text-gray-300 mb-8">testMorton's F ine Catering specializes in delivering exceptional off-premises catering for weddings, corporate events, and campus functions throughout the Greater Lansing area.</p>
+                <p className="text-gray-300 mb-8">Morton's F ine Catering specializes in delivering exceptional off-premises catering for weddings, corporate events, and campus functions throughout the Greater Lansing area.</p>
                 <p className="text-gray-300 mb-8">
                   Our approach combines culinary excellence with personalized service, ensuring that
                   every detail of your event exceeds expectations. From menu development to execution,
