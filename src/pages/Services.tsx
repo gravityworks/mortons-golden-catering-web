@@ -1,11 +1,13 @@
 
 import React from 'react';
 import { Cake, Briefcase, Users, Gift, Coffee, Utensils, GlassWater, Table, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import Hero from '@/components/ui/hero/Hero';
 import BookCta from '@/components/ui/book-cta/BookCta';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
   return (
@@ -16,7 +18,7 @@ const Services = () => {
         <Hero 
           title="Our Services"
           subtitle="MORTON'S FINE CATERING"
-          description="At Morton's we believe that great food brings people together—and every event deserves a menu worth remembering. Whether you're planning an elegant wedding or a casual gathering at home, our team is here to deliver exceptional flavor, flawless service, and a stress-free experience from start to finish."
+          description="At Morton's we believe that great food brings people together—and every event deserves a menu worth remembering. Whether you're planning an elegant wedding or a casual gathering at home, our team is here to deliver exceptional flavor, flawless service, and a stress-free experience from start to finish throughout Greater Lansing, Michigan."
           imageUrl="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
           height="min-h-[60vh]"
         />
@@ -52,6 +54,14 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+                
+                <div className="mt-8">
+                  <Button asChild variant="default" className="bg-gold hover:bg-gold/90 text-black">
+                    <Link to="/services/wedding">
+                      Wedding Services
+                    </Link>
+                  </Button>
                 </div>
               </div>
               <div>
@@ -102,6 +112,14 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+                
+                <div className="mt-8">
+                  <Button asChild variant="default" className="bg-gold hover:bg-gold/90 text-black">
+                    <Link to="/services/corporate">
+                      Corporate Event Services
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>
