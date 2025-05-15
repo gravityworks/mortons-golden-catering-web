@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/navbar/Navbar';
@@ -77,17 +78,10 @@ const CorporateServices = () => {
         <section className="py-16 bg-rich-gray border-y border-gold/20">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-8 text-center">Our Corporate Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-rich-black p-6 rounded-lg border border-gray-800 hover:border-gold/30 transition-all duration-300">
                 <h3 className="text-xl font-playfair font-semibold text-gold mb-4">Breakfast Meetings</h3>
                 <p className="text-gray-300">Start the day right with continental breakfasts, hot breakfast buffets.</p>
-              </div>
-              <div className="bg-rich-black p-6 rounded-lg border border-gray-800 hover:border-gold/30 transition-all duration-300">
-                <h3 className="text-xl font-playfair font-semibold text-gold mb-4">Executive Lunches</h3>
-                <p className="text-gray-300">
-                  Impress clients and team members with refined lunch options that combine 
-                  convenience with culinary excellence.
-                </p>
               </div>
               <div className="bg-rich-black p-6 rounded-lg border border-gray-800 hover:border-gold/30 transition-all duration-300">
                 <h3 className="text-xl font-playfair font-semibold text-gold mb-4">All-Day Conferences</h3>
