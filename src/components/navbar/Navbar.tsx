@@ -44,7 +44,7 @@ const Navbar = () => {
           <Link to="/services" className="text-white nav-link">Services</Link>
           <Link to="/menus" className="text-white nav-link">Menus</Link>
           <Link to="/contact">
-            <Button className="btn-gold">Contact Us</Button>
+            <Button className="bg-gold hover:bg-gold-light text-black py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300">Contact Us</Button>
           </Link>
         </div>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
             <Link to="/services" className="text-white nav-link text-lg" onClick={toggleMenu}>Services</Link>
             <Link to="/menus" className="text-white nav-link text-lg" onClick={toggleMenu}>Menus</Link>
             <Link to="/contact" onClick={toggleMenu}>
-              <Button className="btn-gold w-full">Contact Us</Button>
+              <Button className="bg-gold hover:bg-gold-light text-black py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300 w-full">Contact Us</Button>
             </Link>
           </div>
         </div>
