@@ -72,7 +72,7 @@
   }
   
   .btn-gold {
-    @apply bg-gold hover:bg-gold-light text-white py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300;
+    @apply bg-gold hover:bg-gold-light text-black py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300;
   }
 
   .btn-outline {
