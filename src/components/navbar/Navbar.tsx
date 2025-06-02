@@ -42,9 +42,9 @@ const Navbar = () => {
           <Link to="/" className="text-white nav-link">Home</Link>
           <Link to="/about-us" className="text-white nav-link">About Us</Link>
           <Link to="/services" className="text-white nav-link">Services</Link>
-          <Link to="/menus" className="text-white nav-link">Menus</Link>
-          <Link to="/contact">
-            <Button className="bg-gold hover:bg-gold-light text-black py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300">Contact Us</Button>
+          <Link to="/contact" className="text-white nav-link">Contact Us</Link>
+          <Link to="/menus">
+            <Button className="bg-gold hover:bg-gold-light text-black py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300">Menus</Button>
           </Link>
         </div>
 
@@ -65,9 +65,9 @@ const Navbar = () => {
             <Link to="/" className="text-white nav-link text-lg" onClick={toggleMenu}>Home</Link>
             <Link to="/about-us" className="text-white nav-link text-lg" onClick={toggleMenu}>About Us</Link>
             <Link to="/services" className="text-white nav-link text-lg" onClick={toggleMenu}>Services</Link>
-            <Link to="/menus" className="text-white nav-link text-lg" onClick={toggleMenu}>Menus</Link>
-            <Link to="/contact" onClick={toggleMenu}>
-              <Button className="bg-gold hover:bg-gold-light text-black py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300 w-full">Contact Us</Button>
+            <Link to="/contact" className="text-white nav-link text-lg" onClick={toggleMenu}>Contact Us</Link>
+            <Link to="/menus" onClick={toggleMenu}>
+              <Button className="bg-gold hover:bg-gold-light text-black py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300 w-full">Menus</Button>
             </Link>
           </div>
         </div>
