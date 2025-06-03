@@ -7,6 +7,7 @@ import FeatureSection from '@/components/ui/feature-section/FeatureSection';
 import { Testimonials } from '@/components/ui/testimonial/Testimonial';
 import BookCta from '@/components/ui/book-cta/BookCta';
 import FoodGallery from '@/components/ui/food-gallery/FoodGallery';
+
 const featuresData = [{
   title: "Exquisite Cuisine",
   description: "Chef-driven menus that blend classic comfort with creative innovation, using only the finest, freshest ingredients.",
@@ -52,6 +53,7 @@ const foodGalleryImages = [{
   src: "/lovable-uploads/31f56b24-5898-453e-a799-65fd34f28d2d.png",
   alt: "Dessert display with cupcakes, macarons and cake pops"
 }];
+
 const Index = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -62,7 +64,7 @@ const Index = () => {
           description="From weddings to corporate gatherings, we serve Greater Lansing with chef-crafted cuisine, flawless service, and attention to every detail." 
           imageUrl="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png" 
           ctaText="Contact Us" 
-          height="min-h-screen" 
+          height="h-[60vh]" 
         />
         
         <section className="py-24 bg-rich-gray border-y border-gold/20">
@@ -103,4 +105,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
