@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
@@ -6,7 +5,6 @@ import Hero from '@/components/ui/hero/Hero';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import BookCta from '@/components/ui/book-cta/BookCta';
-
 const Menus = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -46,7 +44,7 @@ const Menus = () => {
               <TabsContent value="appetizers" className="mt-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
-                    <h3 className="text-2xl font-playfair font-semibold text-gold mb-6">Party Trays And Displays</h3>
+                    <h3 className="text-2xl font-playfair font-semibold mb-6 text-[#d4af37]">Party Trays And Displays</h3>
                     <div className="bg-rich-gray/50 rounded-lg p-4 mb-6 border border-gold/20">
                       <p className="text-white text-sm leading-relaxed">
                         Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
@@ -788,5 +786,4 @@ const Menus = () => {
       <Footer />
     </div>;
 };
-
 export default Menus;
