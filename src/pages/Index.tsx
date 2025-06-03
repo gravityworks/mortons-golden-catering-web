@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ChefHat, Utensils, Wine } from 'lucide-react';
 import Navbar from '@/components/navbar/Navbar';
@@ -68,7 +69,14 @@ const Index = () => {
         />
         
         {/* Call to Action Section */}
-        <section className="py-16 bg-rich-black">
+        <section 
+          className="py-16 bg-rich-black relative"
+          style={{
+            backgroundImage: `url('/lovable-uploads/c8677d0a-a2c2-430e-91a3-d71a96c1c5ae.png')`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: 'auto'
+          }}
+        >
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
               Discover Our Culinary Offerings
