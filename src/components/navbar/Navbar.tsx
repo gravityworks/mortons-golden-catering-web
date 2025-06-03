@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/ui/logo/Logo';
 
@@ -35,7 +36,19 @@ const Navbar = () => {
       }`}
     >
       <div className="container-custom flex justify-between items-center">
-        <Logo width={scrolled ? 120 : 140} />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ 
+            opacity: scrolled ? 1 : 0, 
+            scale: scrolled ? 1 : 0.8 
+          }}
+          transition={{ 
+            duration: 0.3,
+            ease: "easeInOut"
+          }}
+        >
+          <Logo width={scrolled ? 120 : 140} />
+        </motion.div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
