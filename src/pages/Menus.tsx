@@ -32,11 +32,36 @@ const Menus = () => {
             
             <Tabs defaultValue="appetizers" className="w-full">
               <TabsList className="grid w-full md:grid-cols-5 bg-rich-gray border border-gold/30 rounded-lg h-auto">
-                <TabsTrigger value="appetizers" className="py-3">Appetizers And Platters</TabsTrigger>
-                <TabsTrigger value="breakfast" className="py-3">Breakfast</TabsTrigger>
-                <TabsTrigger value="mortons" className="py-3">Morton's Catering Menu</TabsTrigger>
-                <TabsTrigger value="bbq" className="py-3">BBQ Menu</TabsTrigger>
-                <TabsTrigger value="desserts" className="py-3">Desserts</TabsTrigger>
+                <TabsTrigger 
+                  value="appetizers" 
+                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
+                >
+                  Appetizers And Platters
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="breakfast" 
+                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
+                >
+                  Breakfast
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="mortons" 
+                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
+                >
+                  Morton's Catering Menu
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="bbq" 
+                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
+                >
+                  BBQ Menu
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="desserts" 
+                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
+                >
+                  Desserts
+                </TabsTrigger>
               </TabsList>
               
               <TabsContent value="appetizers" className="mt-8">
