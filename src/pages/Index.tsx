@@ -57,7 +57,13 @@ const Index = () => {
       <Navbar />
       
       <main className="flex-grow">
-        <Hero title="Exceptional Catering for Exceptional Events" subtitle="MORTON'S FINE CATERING" description="From weddings to corporate gatherings, we serve Greater Lansing with chef-crafted cuisine, flawless service, and attention to every detail." imageUrl="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png" ctaText="Contact Us" height="min-h-screen" />
+        <Hero 
+          title="Mortons Fine Catering" 
+          description="From weddings to corporate gatherings, we serve Greater Lansing with chef-crafted cuisine, flawless service, and attention to every detail." 
+          imageUrl="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png" 
+          ctaText="Contact Us" 
+          height="min-h-screen" 
+        />
         
         <section className="py-24 bg-rich-gray border-y border-gold/20">
           <div className="container-custom">
