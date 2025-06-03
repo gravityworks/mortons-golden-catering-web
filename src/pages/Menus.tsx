@@ -5,7 +5,6 @@ import Hero from '@/components/ui/hero/Hero';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import BookCta from '@/components/ui/book-cta/BookCta';
-
 const Menus = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -144,8 +143,8 @@ const Menus = () => {
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <div className="flex gap-3 mb-4">
                           <div>
-                            <h4 className="text-xl font-playfair text-white">Passed Hot Items</h4>
-                            <p className="text-gold text-sm mt-1">$40 per dozen, minimum 3 dozen per selection</p>
+                            <h4 className="text-xl font-playfair text-white">Canapés, Crostinis, & Crisps</h4>
+                            <p className="text-gold text-sm mt-1">vegan      v-vegetarian    gf-gluten-friendly    df-dairy-free</p>
                           </div>
                         </div>
                         <ul className="space-y-3 text-gray-300">
@@ -153,31 +152,32 @@ const Menus = () => {
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Bacon-wrapped scallops</span>
+                            <span>Phyllo Canapés (v) Brie, walnut and pear; or chevre with basil and tomato; or caramelized onion and boursin cheese $85 </span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Wild mushroom and goat cheese tartlets</span>
+                            <span>Asparagus Crostini (v) Roasted shaved asparagus, ricotta, fresh dill and lemon zest on crostini $85</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Lamb lollipops with mint pesto</span>
+                            <span>Roasted Tomato Crostini (v) with za’atar and labne $85</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Chicken satay with peanut sauce</span>
+                            <span>Traditional Bruschetta (vegan, gf) Fresh tomatoes, cucumber, basil, and red onion, with crostini $65
+(crostini contains gluten and parmesan)</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Coconut shrimp with sweet chili sauce</span>
+                            <span>Michigan White Bean Bruschetta (vegan, gf) Roasted red peppers, fennel, fresh herbs and olive oil, crostini $70 (crostini contains gluten and parmesan)</span>
                           </li>
                         </ul>
                       </div>
@@ -786,5 +786,4 @@ const Menus = () => {
       <Footer />
     </div>;
 };
-
 export default Menus;
