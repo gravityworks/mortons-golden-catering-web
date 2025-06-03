@@ -36,22 +36,13 @@ const Navbar = () => {
       }`}
     >
       <div className="container-custom flex justify-between items-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ 
-            opacity: scrolled ? 1 : 0, 
-            scale: scrolled ? 1 : 0.8 
-          }}
-          transition={{ 
-            duration: 0.3,
-            ease: "easeInOut"
-          }}
-        >
-          <Logo width={scrolled ? 120 : 140} />
-        </motion.div>
+        {/* Large Logo positioned to overlap */}
+        <div className="absolute top-0 left-8 z-60">
+          <Logo width={200} className="transform translate-y-2" />
+        </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        {/* Desktop Navigation - moved to the right */}
+        <div className="hidden md:flex items-center space-x-8 ml-auto">
           <Link to="/" className="text-white nav-link">Home</Link>
           <Link to="/about-us" className="text-white nav-link">About Us</Link>
           <Link to="/services" className="text-white nav-link">Services</Link>
@@ -63,7 +54,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Toggle */}
         <button 
-          className="md:hidden text-white p-2"
+          className="md:hidden text-white p-2 ml-auto"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
