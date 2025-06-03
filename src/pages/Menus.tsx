@@ -4,7 +4,9 @@ import Footer from '@/components/footer/Footer';
 import Hero from '@/components/ui/hero/Hero';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
 import BookCta from '@/components/ui/book-cta/BookCta';
+
 const Menus = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -42,6 +44,15 @@ const Menus = () => {
               </TabsList>
               
               <TabsContent value="appetizers" className="mt-8">
+                <div className="text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-white text-lg leading-relaxed mb-6">
+                    Perfect for cocktail hours, corporate events, and social gatherings. Our appetizers and platters feature fresh, seasonal ingredients prepared with attention to detail and beautiful presentation.
+                  </p>
+                  <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black">
+                    View Menu PDF
+                  </Button>
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <div className="bg-rich-gray/50 rounded-lg p-4 mb-8 border border-gold/20">
@@ -176,6 +187,15 @@ Minimum order, delivery, and service fee will apply</p>
               </TabsContent>
               
               <TabsContent value="breakfast" className="mt-8">
+                <div className="text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-white text-lg leading-relaxed mb-6">
+                    Start your day right with our breakfast and brunch offerings. From continental spreads to elaborate brunch stations, we create memorable morning experiences for corporate meetings, conferences, and special occasions.
+                  </p>
+                  <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black">
+                    View Menu PDF
+                  </Button>
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <div className="bg-rich-gray/50 rounded-lg p-4 mb-8 border border-gold/20">
@@ -295,6 +315,15 @@ Minimum order, delivery, and service fee will apply</p>
               </TabsContent>
               
               <TabsContent value="mortons" className="mt-8">
+                <div className="text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-white text-lg leading-relaxed mb-6">
+                    Our signature plated dinner experience featuring premium ingredients and elegant presentation. Perfect for formal events, galas, and intimate celebrations requiring exceptional culinary excellence.
+                  </p>
+                  <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black">
+                    View Menu PDF
+                  </Button>
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <div className="bg-rich-gray/50 rounded-lg p-4 mb-8 border border-gold/20">
@@ -449,6 +478,15 @@ Minimum order, delivery, and service fee will apply</p>
               </TabsContent>
               
               <TabsContent value="bbq" className="mt-8">
+                <div className="text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-white text-lg leading-relaxed mb-6">
+                    Authentic smokehouse flavors brought to your event with slow-smoked meats and classic sides. Perfect for casual gatherings, outdoor events, and celebrations that call for comfort food excellence.
+                  </p>
+                  <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black">
+                    View Menu PDF
+                  </Button>
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <div className="bg-rich-gray/50 rounded-lg p-4 mb-8 border border-gold/20">
@@ -611,6 +649,15 @@ Minimum order, delivery, and service fee will apply</p>
               </TabsContent>
               
               <TabsContent value="desserts" className="mt-8">
+                <div className="text-center max-w-3xl mx-auto mb-8">
+                  <p className="text-white text-lg leading-relaxed mb-6">
+                    Complete your event with memorable sweet endings. From elegant plated desserts to interactive stations, our pastry team creates desserts that provide the perfect finale to your dining experience.
+                  </p>
+                  <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black">
+                    View Menu PDF
+                  </Button>
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <div className="bg-rich-gray/50 rounded-lg p-4 mb-8 border border-gold/20">
