@@ -124,7 +124,7 @@ const Menus = () => {
                       <img src="/lovable-uploads/747a761d-59d8-43a8-8ec3-2e3ef49c85ce.png" alt="Elegant wrap appetizers" className="w-full h-auto object-cover" />
                     </div>
                     
-                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Hot Hors d'oeuvres</h3>
+                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Appetizers & Hors D'oeuvres</h3>
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <div className="flex gap-3 mb-4">
