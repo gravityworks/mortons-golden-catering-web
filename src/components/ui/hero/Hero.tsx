@@ -1,7 +1,6 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 
 type HeroProps = {
   title: string;
@@ -24,68 +23,30 @@ const Hero = ({
   height = "h-screen",
   overlay = true,
 }: HeroProps) => {
-  const [scrollY, setScrollY] = useState(0);
-  const [showLogo, setShowLogo] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrollY(currentScrollY);
-      
-      // Hide hero logo when scrolled past 200px (when navbar logo becomes visible)
-      setShowLogo(currentScrollY < 200);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Calculate logo scale and opacity based on scroll
-  const logoScale = Math.max(0.3, 1 - (scrollY / 400));
-  const logoOpacity = Math.max(0, 1 - (scrollY / 300));
-
   return (
-    <div className={`relative ${height} w-full flex items-center justify-center overflow-hidden`}>
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      ></div>
-      
-      {/* Overlay */}
-      {overlay && <div className="overlay-dark"></div>}
-      
-      {/* Content */}
-      <div className="container-custom relative z-20 text-center">
-        <AnimatePresence>
-          {showLogo && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ 
-                opacity: logoOpacity, 
-                scale: logoScale,
-              }}
-              exit={{ opacity: 0, scale: 0.3 }}
-              transition={{ 
-                duration: 0.3,
-                ease: "easeInOut"
-              }}
-              className="flex justify-center mb-8"
-            >
-              <img 
-                src="/lovable-uploads/91b7d4c4-b0a4-4909-98d3-5e5b6994aa7f.png" 
-                alt="Morton's Fine Catering" 
-                className="w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full object-cover shadow-2xl"
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
+    <div className={`relative ${height} w-full flex`}>
+      {/* Left Side - Logo on Black Background */}
+      <div className="w-1/2 bg-rich-black flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/91b7d4c4-b0a4-4909-98d3-5e5b6994aa7f.png" 
+          alt="Morton's Fine Catering" 
+          className="w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full object-cover shadow-2xl"
+        />
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
+      {/* Right Side - Text with Background Image */}
+      <div className="w-1/2 relative flex items-center justify-center">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        ></div>
+        
+        {/* Overlay */}
+        {overlay && <div className="absolute inset-0 bg-black/60"></div>}
+        
+        {/* Content */}
+        <div className="relative z-10 text-center px-8">
           {subtitle && (
             <p className="text-gold font-playfair text-xl md:text-2xl mb-4">{subtitle}</p>
           )}
@@ -102,7 +63,7 @@ const Hero = ({
               {ctaText}
             </Link>
           )}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
