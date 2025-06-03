@@ -33,44 +33,6 @@ const AboutUs = () => {
         
         <section className="py-20 bg-rich-gray border-y border-gold/20">
           <div className="container-custom">
-            <h2 className="section-title text-center mb-16">Meet Our Team</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {/* Team Member 1 */}
-              <div className="text-center">
-                <div className="mb-6 overflow-hidden rounded-lg">
-                  <img src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="William Morton" className="w-full h-80 object-cover transition-transform duration-500 hover:scale-105" />
-                </div>
-                <h3 className="text-2xl font-playfair font-semibold text-white mb-2">Beth Morton</h3>
-                <p className="text-gold mb-4">Owner & Executive Chef</p>
-                <p className="text-gray-300">Trained in both fine dining and comfort food, bringing over 15 years of culinary experience to Greater Lansing's catering scene.</p>
-              </div>
-              
-              {/* Team Member 2 */}
-              <div className="text-center">
-                <div className="mb-6 overflow-hidden rounded-lg">
-                  <img src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Sophia Chen" className="w-full h-80 object-cover transition-transform duration-500 hover:scale-105" />
-                </div>
-                <h3 className="text-2xl font-playfair font-semibold text-white mb-2">Sarah Williams</h3>
-                <p className="text-gold mb-4">Events Coordinator</p>
-                <p className="text-gray-300">Your go-to person for logistics, timelines, and those "just one more question" emails.</p>
-              </div>
-              
-              {/* Team Member 3 */}
-              <div className="text-center">
-                <div className="mb-6 overflow-hidden rounded-lg">
-                  <img src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Marcus Johnson" className="w-full h-80 object-cover transition-transform duration-500 hover:scale-105" />
-                </div>
-                <h3 className="text-2xl font-playfair font-semibold text-white mb-2">Catering Team</h3>
-                <p className="text-gold mb-4">Service Staff</p>
-                <p className="text-gray-300">Our seasoned team of prep cooks, servers, and bartenders who bring every event to life across the Greater Lansing area.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-20 bg-rich-black">
-          <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div>
                 <img src="https://images.pexels.com/photos/31985706/pexels-photo-31985706/free-photo-of-elegant-outdoor-wedding-reception-setup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Our Philosophy" className="w-full h-auto rounded-lg shadow-2xl" />
