@@ -56,62 +56,53 @@ const Hero = ({
       {overlay && <div className="overlay-dark"></div>}
       
       {/* Content */}
-      <div className="container-custom relative z-20 h-full flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full w-full">
-          
-          {/* Left Side - Logo */}
-          <div className="flex items-center justify-center lg:justify-start order-1 lg:order-1">
-            <AnimatePresence>
-              {showLogo && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ 
-                    opacity: logoOpacity, 
-                    scale: logoScale,
-                  }}
-                  exit={{ opacity: 0, scale: 0.3 }}
-                  transition={{ 
-                    duration: 0.3,
-                    ease: "easeInOut"
-                  }}
-                  className="flex items-center justify-center"
-                >
-                  <img 
-                    src="/lovable-uploads/91b7d4c4-b0a4-4909-98d3-5e5b6994aa7f.png" 
-                    alt="Morton's Fine Catering" 
-                    className="w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full object-cover shadow-2xl"
-                  />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Right Side - Text Content */}
-          <div className="text-center lg:text-left order-2 lg:order-2 px-4">
+      <div className="container-custom relative z-20 text-center">
+        <AnimatePresence>
+          {showLogo && (
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ 
+                opacity: logoOpacity, 
+                scale: logoScale,
+              }}
+              exit={{ opacity: 0, scale: 0.3 }}
+              transition={{ 
+                duration: 0.3,
+                ease: "easeInOut"
+              }}
+              className="flex justify-center mb-8"
             >
-              {subtitle && (
-                <p className="text-gold font-playfair text-xl md:text-2xl mb-4">{subtitle}</p>
-              )}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6 leading-tight">
-                {title}
-              </h1>
-              {description && (
-                <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-                  {description}
-                </p>
-              )}
-              {ctaText && (
-                <Link to={ctaLink} className="btn-gold inline-block">
-                  {ctaText}
-                </Link>
-              )}
+              <img 
+                src="/lovable-uploads/91b7d4c4-b0a4-4909-98d3-5e5b6994aa7f.png" 
+                alt="Morton's Fine Catering" 
+                className="w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full object-cover shadow-2xl"
+              />
             </motion.div>
-          </div>
-        </div>
+          )}
+        </AnimatePresence>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {subtitle && (
+            <p className="text-gold font-playfair text-xl md:text-2xl mb-4">{subtitle}</p>
+          )}
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6 leading-tight">
+            {title}
+          </h1>
+          {description && (
+            <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+              {description}
+            </p>
+          )}
+          {ctaText && (
+            <Link to={ctaLink} className="btn-gold inline-block">
+              {ctaText}
+            </Link>
+          )}
+        </motion.div>
       </div>
     </div>
   );
