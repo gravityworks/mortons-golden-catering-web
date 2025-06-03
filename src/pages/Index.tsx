@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ChefHat, Utensils, Wine } from 'lucide-react';
 import Navbar from '@/components/navbar/Navbar';
@@ -24,17 +23,17 @@ const featuresData = [{
   icon: <Wine size={48} />
 }];
 const testimonialData = [{
-  quote: "Morton's handled our company gala with such elegance and professionalism. The food was exceptional, and the staff anticipated every need.",
-  author: "Emily Chen",
-  position: "Marketing Director, TechCorp"
-}, {
-  quote: "Our wedding guests are still raving about the food! Morton's truly elevated our special day with their attention to detail and exquisite presentation.",
-  author: "James & Olivia Wilson",
+  quote: "We went with Morton's to serve brunch-style food for our wedding, and we were absolutely blown away. The food was so good! The impossible sausage quiche was delicious, the french toast was the best I've ever had (by a long shot), a guest came up raving about the sausage links, and we were showered with compliments about the food. I've been to several weddings and this was my favorite meal! And not just because it was my wedding lol. They also helped orchestrate by releasing tables, they were prompt at clearing them when guests finished eating, they were fully setup and ready to serve on time, and they cleaned up quickly afterward. We are so happy we went with them on our big day!",
+  author: "Angela and Jacob Archer",
   position: "Wedding Clients"
 }, {
-  quote: "The university president's dinner was flawless thanks to Morton's. Their team handled every aspect with grace, and the customized menu impressed everyone.",
-  author: "Dr. Robert Thompson",
-  position: "University Events Manager"
+  quote: "This is the second event that we have used Morton's Fine Catering for. The servers were exceptionally polite and responsive. The food was well received without a single complaint from my 60+ attendees at the college. I would not hesitate to use them again. This time we had the baked potato bar with chili and cream of broccoli soup. It came with bread, salad, and dessert. The vinaigrette was a house dressing and it was delicious. I say this as a person who normally does not care for salads. It was a good value for what we paid with plenty of offerings for the vegetarians in the group. I still have coworkers rave about the last meal we had with them as I heard the macaroni and cheese and BBQ was outstanding. I would use this company outside of work for catering if I ever need them. That's how good the company is!",
+  author: "Erin Fredrich-Filer",
+  position: "College Event Coordinator"
+}, {
+  quote: "Morton's catered our company Christmas party. The food was fantastic. I appreciated the communication and the servers. We had a variety of a dinner package with added sides. The hit of the night was the Mac and cheese bar and mashed potato bar. We also loved the desserts. Highly recommend!",
+  author: "Kori Shook",
+  position: "Corporate Client"
 }];
 const foodGalleryImages = [{
   src: "/lovable-uploads/4aae84da-3941-4510-8410-850ad17f22eb.png",
