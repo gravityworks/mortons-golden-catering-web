@@ -7,6 +7,7 @@ import FeatureSection from '@/components/ui/feature-section/FeatureSection';
 import { Testimonials } from '@/components/ui/testimonial/Testimonial';
 import BookCta from '@/components/ui/book-cta/BookCta';
 import FoodGallery from '@/components/ui/food-gallery/FoodGallery';
+import { Link } from 'react-router-dom';
 
 const featuresData = [{
   title: "Exquisite Cuisine",
@@ -66,6 +67,21 @@ const Index = () => {
           ctaText="Contact Us" 
           height="h-[60vh]" 
         />
+        
+        {/* Call to Action Section */}
+        <section className="py-16 bg-rich-black">
+          <div className="container-custom text-center">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
+              Discover Our Culinary Offerings
+            </h2>
+            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+              Explore our carefully crafted menus featuring seasonal ingredients and exceptional flavors designed to make your event unforgettable.
+            </p>
+            <Link to="/menus" className="btn-gold inline-block">
+              View Our Menus
+            </Link>
+          </div>
+        </section>
         
         <section className="py-24 bg-rich-gray border-y border-gold/20">
           <div className="container-custom">
