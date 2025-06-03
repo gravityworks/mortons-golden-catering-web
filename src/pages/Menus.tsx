@@ -5,6 +5,7 @@ import Hero from '@/components/ui/hero/Hero';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import BookCta from '@/components/ui/book-cta/BookCta';
+
 const Menus = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -45,6 +46,13 @@ const Menus = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Party Trays And Displays</h3>
+                    <div className="bg-rich-gray/50 rounded-lg p-4 mb-6 border border-gold/20">
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
+                        <br />
+                        Minimum order, delivery, and service fee will apply
+                      </p>
+                    </div>
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <div className="flex gap-3 mb-4">
@@ -125,6 +133,13 @@ const Menus = () => {
                     </div>
                     
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Appetizers & Hors D'oeuvres</h3>
+                    <div className="bg-rich-gray/50 rounded-lg p-4 mb-6 border border-gold/20">
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
+                        <br />
+                        Minimum order, delivery, and service fee will apply
+                      </p>
+                    </div>
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <div className="flex gap-3 mb-4">
@@ -179,6 +194,13 @@ const Menus = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Breakfast & Brunch Menu</h3>
+                    <div className="bg-rich-gray/50 rounded-lg p-4 mb-6 border border-gold/20">
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
+                        <br />
+                        Minimum order, delivery, and service fee will apply
+                      </p>
+                    </div>
                     <p className="text-gray-300 mb-6">
                       Start your event with our delicious breakfast and brunch offerings, perfect for corporate meetings, 
                       conferences, or special occasions.
@@ -309,6 +331,13 @@ const Menus = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Plated Dinner Menu</h3>
+                    <div className="bg-rich-gray/50 rounded-lg p-4 mb-6 border border-gold/20">
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
+                        <br />
+                        Minimum order, delivery, and service fee will apply
+                      </p>
+                    </div>
                     <p className="text-gray-300 mb-6">
                       Our plated dinners include artisan bread service, a first course, entrée with sides, and coffee & tea service.
                       Pricing starts at $65 per person.
@@ -449,6 +478,13 @@ const Menus = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">BBQ Menu</h3>
+                    <div className="bg-rich-gray/50 rounded-lg p-4 mb-6 border border-gold/20">
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
+                        <br />
+                        Minimum order, delivery, and service fee will apply
+                      </p>
+                    </div>
                     <p className="text-gray-300 mb-6">
                       Our BBQ menu brings authentic smokehouse flavors to your event with slow-smoked meats 
                       and classic sides. Perfect for casual gatherings and outdoor events.
@@ -601,6 +637,13 @@ const Menus = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Dessert Options</h3>
+                    <div className="bg-rich-gray/50 rounded-lg p-4 mb-6 border border-gold/20">
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
+                        <br />
+                        Minimum order, delivery, and service fee will apply
+                      </p>
+                    </div>
                     <p className="text-gray-300 mb-6">
                       Choose from our chef's selection of sweet endings to complete your event.
                     </p>
@@ -743,4 +786,5 @@ const Menus = () => {
       <Footer />
     </div>;
 };
+
 export default Menus;
