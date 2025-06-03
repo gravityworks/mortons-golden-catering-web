@@ -209,71 +209,51 @@ const Menus = () => {
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <h4 className="text-xl font-playfair text-gold mb-4">Continental Breakfast</h4>
-                        <p className="text-gold text-sm mb-4">$18 per person</p>
+                        <p className="text-gold text-sm mb-4">$8.50/person</p>
                         
                         <ul className="space-y-3 text-white">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Assorted fresh pastries and muffins</span>
+                            <span>Assortment of freshly baked bagels and breakfast pastries, with cream cheese, butter, and jam</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Seasonal fresh fruit display</span>
+                            <span>Fresh fruit display with seasonal fruits and berries, or basket of whole fruit</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Assorted bagels with cream cheese</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Premium coffee, tea, and juice</span>
-                          </li>
+                          
+                          
                         </ul>
                       </div>
                       
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
-                        <h4 className="text-xl font-playfair text-gold mb-4">Hot Breakfast Buffet</h4>
-                        <p className="text-gold text-sm mb-4">$28 per person</p>
+                        <h4 className="text-xl font-playfair text-gold mb-4">Breakfast Burritos</h4>
+                        <p className="text-gold text-sm mb-4">$9.50/guest</p>
                         
                         <ul className="space-y-3 text-white">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Scrambled eggs with herbs</span>
+                            <span>Fluffy scrambled eggs, black beans, sausage, or bacon and cheese, rolled in a flour tortilla</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Crispy bacon and sausage links</span>
+                            <span>Salsa and sour cream on the side</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Breakfast potatoes with peppers and onions</span>
+                            <span>Fresh fruit display with seasonal fruits and berries, or basket of whole fruit</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Fresh fruit salad and pastries</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Coffee, tea, and orange juice</span>
-                          </li>
+                          
+                          
                         </ul>
                       </div>
                     </div>
