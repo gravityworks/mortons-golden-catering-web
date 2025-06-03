@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Navbar from '@/components/navbar/Navbar';
@@ -6,10 +5,10 @@ import Footer from '@/components/footer/Footer';
 import Hero from '@/components/ui/hero/Hero';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
+
 const Contact = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
+  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     toast({
@@ -17,11 +16,17 @@ const Contact = () => {
       description: "Thank you for your inquiry. Our team will contact you shortly."
     });
   };
-  return <div className="min-h-screen flex flex-col">
+
+  return (
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-grow">
-        <Hero title="Contact Us" subtitle="MORTON'S FINE CATERING" imageUrl="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" height="min-h-[50vh]" />
+        <Hero 
+          title="Contact Us" 
+          imageUrl="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" 
+          height="min-h-[50vh]" 
+        />
         
         <section className="py-20 bg-rich-black">
           <div className="container-custom">
@@ -195,6 +200,8 @@ const Contact = () => {
       </main>
       
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Contact;
