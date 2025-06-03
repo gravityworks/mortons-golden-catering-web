@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Cake, Briefcase, Users, Gift, Coffee, Utensils, GlassWater, Table, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -17,7 +16,6 @@ const Services = () => {
       <main className="flex-grow">
         <Hero 
           title="Our Services"
-          subtitle="MORTON'S FINE CATERING"
           description="At Morton's we believe that great food brings people together—and every event deserves a menu worth remembering. Whether you're planning an elegant wedding or a casual gathering at home, our team is here to deliver exceptional flavor, flawless service, and a stress-free experience from start to finish throughout Greater Lansing, Michigan."
           imageUrl="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
           height="min-h-[60vh]"
