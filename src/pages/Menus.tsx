@@ -202,7 +202,7 @@ const Menus = () => {
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <h4 className="text-xl font-playfair text-gold mb-2">Continental Breakfast</h4>
-                        <p className="text-gold text-sm mb-4">$8.50 per person</p>
+                        <p className="text-white text-sm mb-4">$8.50 per person</p>
                         <ul className="space-y-3 text-white">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
@@ -227,7 +227,7 @@ const Menus = () => {
                       
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <h4 className="text-xl font-playfair text-gold mb-2">Breakfast Burritos</h4>
-                        <p className="text-gold text-sm mb-4">$9.50 per guest</p>
+                        <p className="text-white text-sm mb-4">$9.50 per guest</p>
                         <ul className="space-y-3 text-white">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
@@ -265,7 +265,7 @@ const Menus = () => {
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <h4 className="text-xl font-playfair text-gold mb-2">Brunch Specialties</h4>
-                        <p className="text-gold text-sm mb-4">$35 per person</p>
+                        <p className="text-white text-sm mb-4">$35 per person</p>
                         <ul className="space-y-3 text-white">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
@@ -512,7 +512,7 @@ const Menus = () => {
                       
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <h4 className="text-xl font-playfair text-gold mb-2">Classic BBQ Package</h4>
-                        <p className="text-gold text-sm mb-4">$32 per person - includes choice of two meats and three sides</p>
+                        <p className="text-white text-sm mb-4">$32 per person - includes choice of two meats and three sides</p>
                         <ul className="space-y-3 text-white">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
@@ -550,7 +550,7 @@ const Menus = () => {
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <h4 className="text-xl font-playfair text-gold mb-2">Traditional Sides</h4>
-                        <p className="text-gold text-sm mb-4">$6 per person per side</p>
+                        <p className="text-white text-sm mb-4">$6 per person per side</p>
                         <ul className="space-y-3 text-white">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
@@ -637,7 +637,7 @@ const Menus = () => {
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <h4 className="text-xl font-playfair text-gold mb-2">Classic Selections</h4>
-                        <p className="text-gold text-sm mb-4">$12 per person</p>
+                        <p className="text-white text-sm mb-4">$12 per person</p>
                         <ul className="space-y-3 text-white">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
@@ -674,7 +674,7 @@ const Menus = () => {
                       
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <h4 className="text-xl font-playfair text-gold mb-2">Dessert Stations</h4>
-                        <p className="text-gold text-sm mb-4">Minimum 40 guests</p>
+                        <p className="text-white text-sm mb-4">Minimum 40 guests</p>
                         <ul className="space-y-3 text-white">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
