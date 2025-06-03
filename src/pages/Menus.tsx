@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
@@ -31,15 +30,16 @@ const Menus = () => {
               </p>
             </div>
             
-            <Tabs defaultValue="hors" className="w-full">
-              <TabsList className="grid w-full md:grid-cols-4 bg-rich-gray border border-gold/30 rounded-lg h-auto">
-                <TabsTrigger value="hors" className="py-3">Hors d'oeuvres</TabsTrigger>
-                <TabsTrigger value="dinner" className="py-3">Plated Dinners</TabsTrigger>
-                <TabsTrigger value="buffet" className="py-3">Buffet</TabsTrigger>
-                <TabsTrigger value="dessert" className="py-3">Desserts</TabsTrigger>
+            <Tabs defaultValue="appetizers" className="w-full">
+              <TabsList className="grid w-full md:grid-cols-5 bg-rich-gray border border-gold/30 rounded-lg h-auto">
+                <TabsTrigger value="appetizers" className="py-3">Appetizers And Platters</TabsTrigger>
+                <TabsTrigger value="breakfast" className="py-3">Breakfast</TabsTrigger>
+                <TabsTrigger value="mortons" className="py-3">Morton's Catering Menu</TabsTrigger>
+                <TabsTrigger value="bbq" className="py-3">BBQ Menu</TabsTrigger>
+                <TabsTrigger value="desserts" className="py-3">Desserts</TabsTrigger>
               </TabsList>
               
-              <TabsContent value="hors" className="mt-8">
+              <TabsContent value="appetizers" className="mt-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Cold Hors d'oeuvres</h3>
@@ -186,7 +186,141 @@ const Menus = () => {
                 </div>
               </TabsContent>
               
-              <TabsContent value="dinner" className="mt-8">
+              <TabsContent value="breakfast" className="mt-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                  <div>
+                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Breakfast & Brunch Menu</h3>
+                    <p className="text-gray-300 mb-6">
+                      Start your event with our delicious breakfast and brunch offerings, perfect for corporate meetings, 
+                      conferences, or special occasions.
+                    </p>
+                    
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Continental Breakfast</h4>
+                        <p className="text-gold text-sm mb-4">$18 per person</p>
+                        
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Assorted fresh pastries and muffins</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Seasonal fresh fruit display</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Assorted bagels with cream cheese</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Premium coffee, tea, and juice</span>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Hot Breakfast Buffet</h4>
+                        <p className="text-gold text-sm mb-4">$28 per person</p>
+                        
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Scrambled eggs with herbs</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Crispy bacon and sausage links</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Breakfast potatoes with peppers and onions</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Fresh fruit salad and pastries</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Coffee, tea, and orange juice</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div className="rounded-lg overflow-hidden mb-6">
+                      <img 
+                        src="/lovable-uploads/4aae84da-3941-4510-8410-850ad17f22eb.png" 
+                        alt="Breakfast pastries and fruit"
+                        className="w-full h-auto object-cover" 
+                      />
+                    </div>
+                    
+                    <div className="space-y-6">
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Brunch Specialties</h4>
+                        <p className="text-gold text-sm mb-4">$35 per person</p>
+                        
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>French toast with maple syrup</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Benedict station with various toppings</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Omelet station with fresh ingredients</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Gourmet salads and sandwiches</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Mimosa and Bloody Mary bar</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="mortons" className="mt-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Plated Dinner Menu</h3>
@@ -334,71 +468,75 @@ const Menus = () => {
                 </div>
               </TabsContent>
               
-              <TabsContent value="buffet" className="mt-8">
+              <TabsContent value="bbq" className="mt-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
-                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Buffet Menus</h3>
+                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">BBQ Menu</h3>
                     <p className="text-gray-300 mb-6">
-                      Our buffet menus offer elegant yet approachable options that provide variety for your guests.
-                      Pricing starts at $45 per person, 25 person minimum.
+                      Our BBQ menu brings authentic smokehouse flavors to your event with slow-smoked meats 
+                      and classic sides. Perfect for casual gatherings and outdoor events.
                     </p>
                     
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
-                        <h4 className="text-xl font-playfair text-white mb-4">Classic Buffet</h4>
-                        <p className="text-gold text-sm mb-4">$48 per person</p>
+                        <h4 className="text-xl font-playfair text-white mb-4">Smoked Meats</h4>
+                        <p className="text-gold text-sm mb-4">Priced per person, 25 person minimum</p>
                         
-                        <h5 className="text-white font-medium mb-2">Salads (select two)</h5>
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Pulled pork with tangy BBQ sauce - $16</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Smoked brisket with dry rub - $22</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>BBQ ribs (half rack per person) - $24</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Smoked chicken (half bird) - $18</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Smoked sausage links - $14</span>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">Classic BBQ Package</h4>
+                        <p className="text-gold text-sm mb-4">$32 per person - includes choice of two meats and three sides</p>
+                        
+                        <h5 className="text-white font-medium mb-2">Choose Two Meats:</h5>
                         <ul className="space-y-2 text-gray-300 mb-4">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Classic Caesar salad</span>
+                            <span>Pulled pork or brisket</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Mixed greens with assorted toppings and dressings</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Mediterranean orzo pasta salad</span>
+                            <span>Smoked chicken or ribs</span>
                           </li>
                         </ul>
                         
-                        <h5 className="text-white font-medium mb-2">Entrées (select two)</h5>
-                        <ul className="space-y-2 text-gray-300 mb-4">
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Carved roast beef with horseradish cream</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Herb-roasted chicken</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Grilled salmon with citrus butter</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Vegetable lasagna</span>
-                          </li>
-                        </ul>
-                        
-                        <p className="text-gray-300">Includes artisan rolls, seasonal vegetables, choice of potato or rice, and coffee service</p>
+                        <p className="text-gray-300">Includes fresh buns, pickles, onions, and assorted BBQ sauces</p>
                       </div>
                     </div>
                   </div>
@@ -406,98 +544,87 @@ const Menus = () => {
                   <div>
                     <div className="rounded-lg overflow-hidden mb-6">
                       <img 
-                        src="/lovable-uploads/98b6fe0d-1a31-4839-a54e-e71d9494cf69.png" 
-                        alt="Beautifully arranged catering buffet with salads"
+                        src="/lovable-uploads/7422a23e-773e-4ffb-8a7f-2ead0162deb6.png" 
+                        alt="BBQ grilled meats"
                         className="w-full h-auto object-cover" 
                       />
                     </div>
                     
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
-                        <h4 className="text-xl font-playfair text-white mb-4">Specialty Themed Buffets</h4>
+                        <h4 className="text-xl font-playfair text-white mb-4">Classic BBQ Sides</h4>
+                        <p className="text-gold text-sm mb-4">$6 per person per side</p>
                         
-                        <h5 className="text-white font-medium mb-2">Mediterranean Table - $55 per person</h5>
-                        <ul className="space-y-2 text-gray-300 mb-4">
+                        <ul className="space-y-3 text-gray-300">
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Mezze display with hummus, baba ganoush, olives, and pita</span>
+                            <span>Creamy coleslaw</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Greek salad with feta and kalamata olives</span>
+                            <span>Baked beans with bacon</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Grilled chicken souvlaki and beef kofta</span>
+                            <span>Mac and cheese</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Vegetable moussaka</span>
+                            <span>Potato salad</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Lemon rice and roasted vegetables</span>
-                          </li>
-                        </ul>
-                        
-                        <h5 className="text-white font-medium mb-2">Pacific Rim - $58 per person</h5>
-                        <ul className="space-y-2 text-gray-300">
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Sushi display (California rolls, spicy tuna, vegetable)</span>
+                            <span>Cornbread with honey butter</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Asian slaw with sesame ginger dressing</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Teriyaki glazed salmon</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Korean beef bulgogi</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Stir-fried vegetables and coconut jasmine rice</span>
+                            <span>Grilled corn on the cob</span>
                           </li>
                         </ul>
                       </div>
-                    </div>
-                    
-                    <div className="rounded-lg overflow-hidden mt-6">
-                      <img 
-                        src="/lovable-uploads/7422a23e-773e-4ffb-8a7f-2ead0162deb6.png" 
-                        alt="Grilled chicken skewers with glaze"
-                        className="w-full h-auto object-cover" 
-                      />
+                      
+                      <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
+                        <h4 className="text-xl font-playfair text-white mb-4">BBQ Enhancements</h4>
+                        
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Live carving station - $4 per person</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Gourmet BBQ sauce bar - $3 per person</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="flex-shrink-0 mt-1.5">
+                              <div className="bg-gold w-2 h-2 rounded-full"></div>
+                            </div>
+                            <span>Smoked vegetable platter - $5 per person</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </TabsContent>
               
-              <TabsContent value="dessert" className="mt-8">
+              <TabsContent value="desserts" className="mt-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Dessert Options</h3>
