@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
@@ -6,20 +5,12 @@ import Hero from '@/components/ui/hero/Hero';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import BookCta from '@/components/ui/book-cta/BookCta';
-
 const Menus = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-grow">
-        <Hero 
-          title="Menus" 
-          subtitle="MORTON'S FINE CATERING" 
-          description="From elegant plated dinners to interactive stations and casual buffets, our culinary team crafts menus that showcase seasonal ingredients and global influences." 
-          imageUrl="/lovable-uploads/ea15893c-7cab-4191-921a-bb420fb56005.png" 
-          height="min-h-[60vh]" 
-        />
+        <Hero title="Menus" subtitle="MORTON'S FINE CATERING" description="From elegant plated dinners to interactive stations and casual buffets, our culinary team crafts menus that showcase seasonal ingredients and global influences." imageUrl="/lovable-uploads/ea15893c-7cab-4191-921a-bb420fb56005.png" height="min-h-[60vh]" />
         
         <section className="py-16 bg-rich-black">
           <div className="container-custom">
@@ -135,9 +126,8 @@ const Menus = () => {
                     </div>
                     
                     <h3 className="text-2xl font-playfair font-semibold text-gold mb-4">Appetizers & Hors D'oeuvres</h3>
-                    <p className="text-white mb-6">
-                      Elegant bite-sized offerings perfect for cocktail receptions and passed service during events.
-                    </p>
+                    <p className="text-white mb-6">Items below are priced for 40-50 pieces.
+Minimum order, delivery, and service fee will apply</p>
                     
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
@@ -779,16 +769,10 @@ const Menus = () => {
           </div>
         </section>
         
-        <BookCta 
-          title="Ready to Create a Menu for Your Special Event?" 
-          subtitle="Our culinary team would be delighted to create a custom menu tailored specifically to your event and preferences." 
-          backgroundImage="/lovable-uploads/71e48cb4-2adb-43b6-a940-f05bd92cfcaf.png" 
-        />
+        <BookCta title="Ready to Create a Menu for Your Special Event?" subtitle="Our culinary team would be delighted to create a custom menu tailored specifically to your event and preferences." backgroundImage="/lovable-uploads/71e48cb4-2adb-43b6-a940-f05bd92cfcaf.png" />
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Menus;
