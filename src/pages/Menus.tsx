@@ -57,7 +57,7 @@ const Menus = () => {
                         <div className="flex gap-3 mb-4">
                           <div>
                             <h4 className="text-xl font-playfair text-white">Fruits & Cheese</h4>
-                            <p className="text-gold text-sm mt-1">vegan      v-vegetarian    gf-gluten-friendly    df-dairy-free</p>
+                            <p className="text-sm mt-1 text-white">vegan      v-vegetarian    gf-gluten-friendly    df-dairy-free</p>
                           </div>
                         </div>
                         <ul className="space-y-3 text-gray-300">
@@ -93,7 +93,7 @@ const Menus = () => {
                         <div className="flex gap-3 mb-4">
                           <div>
                             <h4 className="text-xl font-playfair text-white">Dips & Spreads</h4>
-                            <p className="text-gold text-sm mt-1">vegan      v-vegetarian    gf-gluten-friendly    df-dairy-free</p>
+                            <p className="text-sm mt-1 text-white">vegan      v-vegetarian    gf-gluten-friendly    df-dairy-free</p>
                           </div>
                         </div>
                         <ul className="space-y-3 text-gray-300">
@@ -144,7 +144,7 @@ const Menus = () => {
                         <div className="flex gap-3 mb-4">
                           <div>
                             <h4 className="text-xl font-playfair text-white">Canapés, Crostinis, & Crisps</h4>
-                            <p className="text-gold text-sm mt-1">vegan      v-vegetarian    gf-gluten-friendly    df-dairy-free</p>
+                            <p className="text-sm mt-1 text-white">vegan      v-vegetarian    gf-gluten-friendly    df-dairy-free</p>
                           </div>
                         </div>
                         <ul className="space-y-3 text-gray-300">
