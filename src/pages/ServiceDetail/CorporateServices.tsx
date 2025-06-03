@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/navbar/Navbar';
@@ -8,6 +7,7 @@ import { Testimonials } from '@/components/ui/testimonial/Testimonial';
 import FoodGallery from '@/components/ui/food-gallery/FoodGallery';
 import BookCta from '@/components/ui/book-cta/BookCta';
 import { Button } from '@/components/ui/button';
+
 const CorporateServices = () => {
   const featuredVenues = ["Old Town Marquee", "GLAR Ballroom", "MSU Business College", "Lansing Center", "Grand Ledge Country Club", "Kellogg Center", "University Club of MSU"];
   const corporateTestimonials = [{
@@ -24,7 +24,7 @@ const CorporateServices = () => {
     quote: "From small executive lunches to our 250-person holiday party, Morton's consistently delivers exceptional food and service. Their attention to detail and ability to accommodate last-minute changes has made them an invaluable partner.",
     author: "Mark Wilson",
     position: "Events Coordinator, Greater Lansing Healthcare",
-    imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200"
+    imageUrl: "https://images.unsplash.com/photo-1472099645785-013ccf25f16a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200"
   }];
   const corporateGalleryImages = [{
     src: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205",
@@ -45,11 +45,18 @@ const CorporateServices = () => {
     src: "/lovable-uploads/8dc5924d-5028-4413-a6f6-c4a9be8acdb3.png",
     alt: "Executive meeting catering"
   }];
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-grow">
-        <Hero title="Corporate Event Catering" subtitle="MORTON'S FINE CATERING" description="Elevating your business gatherings with professional catering services throughout Greater Lansing, Michigan." imageUrl="https://images.unsplash.com/photo-1517457373958-b7bdd4587205" height="min-h-[70vh]" overlay={true} />
+        <Hero 
+          title="Corporate Event Catering" 
+          description="Elevating your business gatherings with professional catering services throughout Greater Lansing, Michigan." 
+          imageUrl="https://images.unsplash.com/photo-1517457373958-b7bdd4587205" 
+          height="min-h-[70vh]" 
+          overlay={true} 
+        />
         
         <section className="py-16 bg-rich-black">
           <div className="container-custom">
@@ -148,6 +155,8 @@ const CorporateServices = () => {
       </main>
       
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default CorporateServices;
