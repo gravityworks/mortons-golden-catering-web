@@ -5,20 +5,12 @@ import Hero from '@/components/ui/hero/Hero';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import BookCta from '@/components/ui/book-cta/BookCta';
-
 const Menus = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-grow">
-        <Hero 
-          title="Menus"
-          subtitle="MORTON'S FINE CATERING"
-          description="From elegant plated dinners to interactive stations and casual buffets, our culinary team crafts menus that showcase seasonal ingredients and global influences."
-          imageUrl="/lovable-uploads/ea15893c-7cab-4191-921a-bb420fb56005.png"
-          height="min-h-[60vh]"
-        />
+        <Hero title="Menus" subtitle="MORTON'S FINE CATERING" description="From elegant plated dinners to interactive stations and casual buffets, our culinary team crafts menus that showcase seasonal ingredients and global influences." imageUrl="/lovable-uploads/ea15893c-7cab-4191-921a-bb420fb56005.png" height="min-h-[60vh]" />
         
         <section className="py-16 bg-rich-black">
           <div className="container-custom">
@@ -32,34 +24,19 @@ const Menus = () => {
             
             <Tabs defaultValue="appetizers" className="w-full">
               <TabsList className="grid w-full md:grid-cols-5 bg-rich-gray border border-gold/30 rounded-lg h-auto">
-                <TabsTrigger 
-                  value="appetizers" 
-                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
-                >
+                <TabsTrigger value="appetizers" className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold">
                   Appetizers And Platters
                 </TabsTrigger>
-                <TabsTrigger 
-                  value="breakfast" 
-                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
-                >
+                <TabsTrigger value="breakfast" className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold">
                   Breakfast
                 </TabsTrigger>
-                <TabsTrigger 
-                  value="mortons" 
-                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
-                >
+                <TabsTrigger value="mortons" className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold">
                   Morton's Catering Menu
                 </TabsTrigger>
-                <TabsTrigger 
-                  value="bbq" 
-                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
-                >
+                <TabsTrigger value="bbq" className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold">
                   BBQ Menu
                 </TabsTrigger>
-                <TabsTrigger 
-                  value="desserts" 
-                  className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold"
-                >
+                <TabsTrigger value="desserts" className="py-3 data-[state=active]:bg-gold data-[state=active]:text-black data-[state=active]:font-semibold">
                   Desserts
                 </TabsTrigger>
               </TabsList>
@@ -67,13 +44,16 @@ const Menus = () => {
               <TabsContent value="appetizers" className="mt-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
-                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Cold Hors d'oeuvres</h3>
+                    <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Party Trays And Displays</h3>
                     <div className="space-y-6">
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <div className="flex gap-3 mb-4">
                           <div>
-                            <h4 className="text-xl font-playfair text-white">Passed Canapés</h4>
-                            <p className="text-gold text-sm mt-1">$35 per dozen, minimum 3 dozen per selection</p>
+                            <h4 className="text-xl font-playfair text-white">Fruits & Cheese</h4>
+                            <p className="text-gold text-sm mt-1">Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
+
+
+Minimum order, delivery, and service fee will apply</p>
                           </div>
                         </div>
                         <ul className="space-y-3 text-gray-300">
@@ -81,40 +61,36 @@ const Menus = () => {
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Miniature crab cakes with lemon aioli</span>
+                            <span>Fresh Fruit Display (vegan, gf) Seasonal fruits and berries, artfully presented $80</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Seared tuna on wonton crisp with wasabi cream</span>
+                            <span>Artisan Cheese Board (v, gf) Wedges of specialty cheeses, with flatbread and crackers $80</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Goat cheese and herb tartlets</span>
+                            <span>Baked Brie w/Raspberry (v) Large wheel of brie baked in puff pastry, with raspberry jam, flatbreads &amp; crackers $70</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Prosciutto-wrapped melon with balsamic glaze</span>
+                            <span>Cheese and Crackers (v, gf) Cubed cheddar, Swiss, pepper jack, dill havarti, or Gouda $65Prosciutto-wrapped melon with balsamic glaze</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <div className="flex-shrink-0 mt-1.5">
-                              <div className="bg-gold w-2 h-2 rounded-full"></div>
-                            </div>
-                            <span>Deviled eggs with caviar</span>
-                          </li>
+                          
                         </ul>
                       </div>
                       
                       <div className="bg-rich-gray rounded-lg p-6 border border-gold/10">
                         <div className="flex gap-3 mb-4">
                           <div>
-                            <h4 className="text-xl font-playfair text-white">Platters & Displays</h4>
-                            <p className="text-gold text-sm mt-1">Priced per person, 25 person minimum</p>
+                            <h4 className="text-xl font-playfair text-white">Dips & Spreads</h4>
+                            <p className="text-gold text-sm mt-1">Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
+Minimum order, delivery, and service fee will apply</p>
                           </div>
                         </div>
                         <ul className="space-y-3 text-gray-300">
@@ -122,25 +98,25 @@ const Menus = () => {
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Artisanal cheese board with dried fruits, nuts, and crackers - $8</span>
+                            <span>Buffalo Chicken Dip (gf) Like a hot wing, but in dip form! Corn chips and celery sticks $85</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Crudité display with assorted dips - $6</span>
+                            <span>Caramelized Onion Dip (v, gf) with kettle chips $60</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Charcuterie board with cured meats, pickled vegetables, and mustards - $12</span>
+                            <span>Hummus and Pita (vegan, gf) Traditional garlic, lemon, tahini, chick peas and olive oil, house made pita crisps $60</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="flex-shrink-0 mt-1.5">
                               <div className="bg-gold w-2 h-2 rounded-full"></div>
                             </div>
-                            <span>Seafood display with shrimp, oysters, and crab claws - $18</span>
+                            <span>Pimento Cheese Dip (v) Southern inspired cheese dip with pimento peppers, served with pretzels $75</span>
                           </li>
                         </ul>
                       </div>
@@ -149,11 +125,7 @@ const Menus = () => {
                   
                   <div>
                     <div className="rounded-lg overflow-hidden mb-6">
-                      <img 
-                        src="/lovable-uploads/747a761d-59d8-43a8-8ec3-2e3ef49c85ce.png" 
-                        alt="Elegant wrap appetizers"
-                        className="w-full h-auto object-cover" 
-                      />
+                      <img src="/lovable-uploads/747a761d-59d8-43a8-8ec3-2e3ef49c85ce.png" alt="Elegant wrap appetizers" className="w-full h-auto object-cover" />
                     </div>
                     
                     <h3 className="text-2xl font-playfair font-semibold text-white mb-6">Hot Hors d'oeuvres</h3>
@@ -201,11 +173,7 @@ const Menus = () => {
                     </div>
                     
                     <div className="rounded-lg overflow-hidden mt-6">
-                      <img 
-                        src="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png" 
-                        alt="Charcuterie spread with meats and accompaniments"
-                        className="w-full h-auto object-cover" 
-                      />
+                      <img src="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png" alt="Charcuterie spread with meats and accompaniments" className="w-full h-auto object-cover" />
                     </div>
                   </div>
                 </div>
@@ -295,11 +263,7 @@ const Menus = () => {
                   
                   <div>
                     <div className="rounded-lg overflow-hidden mb-6">
-                      <img 
-                        src="/lovable-uploads/4aae84da-3941-4510-8410-850ad17f22eb.png" 
-                        alt="Breakfast pastries and fruit"
-                        className="w-full h-auto object-cover" 
-                      />
+                      <img src="/lovable-uploads/4aae84da-3941-4510-8410-850ad17f22eb.png" alt="Breakfast pastries and fruit" className="w-full h-auto object-cover" />
                     </div>
                     
                     <div className="space-y-6">
@@ -413,11 +377,7 @@ const Menus = () => {
                   
                   <div>
                     <div className="rounded-lg overflow-hidden mb-6">
-                      <img 
-                        src="/lovable-uploads/761d5e81-4b3c-4715-a21e-21626a8406c0.png" 
-                        alt="Gourmet plated dinner with roasted vegetables and quinoa"
-                        className="w-full h-auto object-cover" 
-                      />
+                      <img src="/lovable-uploads/761d5e81-4b3c-4715-a21e-21626a8406c0.png" alt="Gourmet plated dinner with roasted vegetables and quinoa" className="w-full h-auto object-cover" />
                     </div>
                     
                     <div className="space-y-6">
@@ -483,11 +443,7 @@ const Menus = () => {
                     </div>
                     
                     <div className="rounded-lg overflow-hidden mt-6">
-                      <img 
-                        src="/lovable-uploads/8dc5924d-5028-4413-a6f6-c4a9be8acdb3.png" 
-                        alt="Gourmet crostini with rare beef and greens"
-                        className="w-full h-auto object-cover" 
-                      />
+                      <img src="/lovable-uploads/8dc5924d-5028-4413-a6f6-c4a9be8acdb3.png" alt="Gourmet crostini with rare beef and greens" className="w-full h-auto object-cover" />
                     </div>
                   </div>
                 </div>
@@ -568,11 +524,7 @@ const Menus = () => {
                   
                   <div>
                     <div className="rounded-lg overflow-hidden mb-6">
-                      <img 
-                        src="/lovable-uploads/7422a23e-773e-4ffb-8a7f-2ead0162deb6.png" 
-                        alt="BBQ grilled meats"
-                        className="w-full h-auto object-cover" 
-                      />
+                      <img src="/lovable-uploads/7422a23e-773e-4ffb-8a7f-2ead0162deb6.png" alt="BBQ grilled meats" className="w-full h-auto object-cover" />
                     </div>
                     
                     <div className="space-y-6">
@@ -722,11 +674,7 @@ const Menus = () => {
                   
                   <div>
                     <div className="rounded-lg overflow-hidden mb-6">
-                      <img 
-                        src="/lovable-uploads/3e639f14-2b91-41b7-a995-d4ea1c5984b1.png" 
-                        alt="Elegant fruit tarts with berries and kiwi"
-                        className="w-full h-auto object-cover" 
-                      />
+                      <img src="/lovable-uploads/3e639f14-2b91-41b7-a995-d4ea1c5984b1.png" alt="Elegant fruit tarts with berries and kiwi" className="w-full h-auto object-cover" />
                     </div>
                     
                     <div className="space-y-6">
@@ -776,11 +724,7 @@ const Menus = () => {
                     </div>
                     
                     <div className="rounded-lg overflow-hidden mt-6">
-                      <img 
-                        src="/lovable-uploads/1db4c64d-3219-4445-b1b9-1fbccbb3722f.png" 
-                        alt="Assorted dessert display with macarons and cakes"
-                        className="w-full h-auto object-cover" 
-                      />
+                      <img src="/lovable-uploads/1db4c64d-3219-4445-b1b9-1fbccbb3722f.png" alt="Assorted dessert display with macarons and cakes" className="w-full h-auto object-cover" />
                     </div>
                   </div>
                 </div>
@@ -797,16 +741,10 @@ const Menus = () => {
           </div>
         </section>
         
-        <BookCta 
-          title="Ready to Create a Menu for Your Special Event?"
-          subtitle="Our culinary team would be delighted to create a custom menu tailored specifically to your event and preferences."
-          backgroundImage="/lovable-uploads/71e48cb4-2adb-43b6-a940-f05bd92cfcaf.png"
-        />
+        <BookCta title="Ready to Create a Menu for Your Special Event?" subtitle="Our culinary team would be delighted to create a custom menu tailored specifically to your event and preferences." backgroundImage="/lovable-uploads/71e48cb4-2adb-43b6-a940-f05bd92cfcaf.png" />
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Menus;
