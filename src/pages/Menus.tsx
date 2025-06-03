@@ -50,10 +50,7 @@ const Menus = () => {
                         <div className="flex gap-3 mb-4">
                           <div>
                             <h4 className="text-xl font-playfair text-white">Fruits & Cheese</h4>
-                            <p className="text-gold text-sm mt-1">Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
-
-
-Minimum order, delivery, and service fee will apply</p>
+                            <p className="text-gold text-sm mt-1">vegan      v-vegetarian    gf-gluten-friendly    df-dairy-free</p>
                           </div>
                         </div>
                         <ul className="space-y-3 text-gray-300">
@@ -89,8 +86,7 @@ Minimum order, delivery, and service fee will apply</p>
                         <div className="flex gap-3 mb-4">
                           <div>
                             <h4 className="text-xl font-playfair text-white">Dips & Spreads</h4>
-                            <p className="text-gold text-sm mt-1">Platters and Party Trays are priced to serve 40-50. We recommend a minimum of 1 order per 50 guests. Overall quantities depend on the size and style of your event.
-Minimum order, delivery, and service fee will apply</p>
+                            <p className="text-gold text-sm mt-1">vegan      v-vegetarian    gf-gluten-friendly    df-dairy-free</p>
                           </div>
                         </div>
                         <ul className="space-y-3 text-gray-300">
