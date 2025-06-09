@@ -61,7 +61,7 @@ const Index = () => {
       
       <main className="flex-grow">
         <Hero 
-          title="Mortons Fine Catering" 
+          title="Morton's Fine Catering" 
           description="From weddings to corporate gatherings, we serve Greater Lansing with chef-crafted cuisine, flawless service, and attention to every detail." 
           imageUrl="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png" 
           height="h-[60vh]" 
