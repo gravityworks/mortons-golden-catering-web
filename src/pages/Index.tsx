@@ -70,7 +70,7 @@ const Index = () => {
         
         {/* Call to Action Section */}
         <section 
-          className="py-16 bg-rich-black relative"
+          className="py-16 bg-gold relative"
           style={{
             backgroundImage: `url('/lovable-uploads/c8677d0a-a2c2-430e-91a3-d71a96c1c5ae.png')`,
             backgroundRepeat: 'repeat',
@@ -78,13 +78,13 @@ const Index = () => {
           }}
         >
           <div className="container-custom text-center">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-rich-black mb-4">
               Discover Our Culinary Offerings
             </h2>
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-rich-black text-lg mb-8 max-w-2xl mx-auto">
               Explore our carefully crafted menus featuring seasonal ingredients and exceptional flavors designed to make your event unforgettable.
             </p>
-            <Link to="/menus" className="btn-gold inline-block">
+            <Link to="/menus" className="bg-rich-black hover:bg-rich-gray text-gold py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300 inline-block">
               View Our Menus
             </Link>
           </div>
