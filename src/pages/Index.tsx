@@ -60,12 +60,35 @@ const Index = () => {
       <Navbar />
       
       <main className="flex-grow">
-        <Hero 
-          title="Morton's Fine Catering" 
-          description="From weddings to corporate gatherings, we serve Greater Lansing with chef-crafted cuisine, flawless service, and attention to every detail." 
-          imageUrl="/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png" 
-          height="h-[60vh]" 
-        />
+        {/* Custom Hero Section */}
+        <div className="relative h-[60vh] w-full flex items-center justify-center">
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(/lovable-uploads/70c843ff-7e09-4a39-8cbb-3445782fadcd.png)`
+            }}
+          ></div>
+          
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60"></div>
+          
+          {/* Content */}
+          <div className="relative z-10 text-center px-8">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-gold mb-4 leading-tight">
+              Morton's Fine Catering
+            </h1>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-playfair text-white mb-6">
+              Thoughtful catering. Memorable moments.
+            </h2>
+            <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+              From weddings to corporate gatherings, we serve Greater Lansing with chef-crafted cuisine, flawless service, and attention to every detail.
+            </p>
+            <Link to="/contact" className="btn-gold inline-block">
+              Contact Us
+            </Link>
+          </div>
+        </div>
         
         {/* Call to Action Section */}
         <section className="py-16 bg-gold relative overflow-hidden">
