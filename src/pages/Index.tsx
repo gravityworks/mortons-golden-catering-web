@@ -23,11 +23,11 @@ const featuresData = [{
   icon: <Wine size={48} />
 }];
 const testimonialData = [{
-  quote: "Morton’s catered our church’s 60 th Anniversary Celebration and were outstanding before, during and after our event! They were ultimate professionals, while also being very friendly, flexible and helpful. Their staff, service and food were excellent. We highly recommend them to any individual or organization and will always use them as our first choice.",
+  quote: "We went with Morton's to serve brunch-style food for our wedding, and we were absolutely blown away. The food was so good! The impossible sausage quiche was delicious, the french toast was the best I've ever had (by a long shot), a guest came up raving about the sausage links, and we were showered with compliments about the food. I've been to several weddings and this was my favorite meal! And not just because it was my wedding lol. They also helped orchestrate by releasing tables, they were prompt at clearing them when guests finished eating, they were fully setup and ready to serve on time, and they cleaned up quickly afterward. We are so happy we went with them on our big day!",
   author: "Angela and Jacob Archer",
   position: "Wedding Clients"
 }, {
-  quote: "Our employer hosted a holiday luncheon and everything was GREAT. Food was hot, seasoned well, the staff was punctual and professional. Everyone enjoyed - thank you Morton's!",
+  quote: "This is the second event that we have used Morton's Fine Catering for. The servers were exceptionally polite and responsive. The food was well received without a single complaint from my 60+ attendees at the college. I would not hesitate to use them again. This time we had the baked potato bar with chili and cream of broccoli soup. It came with bread, salad, and dessert. The vinaigrette was a house dressing and it was delicious. I say this as a person who normally does not care for salads. It was a good value for what we paid with plenty of offerings for the vegetarians in the group. I still have coworkers rave about the last meal we had with them as I heard the macaroni and cheese and BBQ was outstanding. I would use this company outside of work for catering if I ever need them. That's how good the company is!",
   author: "Erin Fredrich-Filer",
   position: "College Event Coordinator"
 }, {
