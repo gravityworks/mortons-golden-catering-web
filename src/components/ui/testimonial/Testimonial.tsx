@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 
 type TestimonialProps = {
   quote: string;
@@ -9,6 +8,16 @@ type TestimonialProps = {
 };
 
 const Testimonial = ({ quote, author, position, imageUrl }: TestimonialProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  // Function to check if text needs truncation (approximately 5 lines)
+  const shouldTruncate = quote.length > 200; // Rough estimate for 5 lines
+  
+  // Get truncated text (approximately 5 lines worth)
+  const truncatedText = quote.substring(0, 200) + '...';
+  
+  const displayText = isExpanded || !shouldTruncate ? quote : truncatedText;
+
   return (
     <div className="bg-rich-gray p-8 rounded-lg border border-gray-800">
       <div className="flex flex-col h-full">
@@ -30,9 +39,31 @@ const Testimonial = ({ quote, author, position, imageUrl }: TestimonialProps) =>
           </svg>
         </div>
         
-        <p className="text-white text-lg italic mb-6 flex-grow">"{quote}"</p>
+        <div className="flex-grow">
+          <p 
+            className="text-white text-lg italic mb-4"
+            style={{
+              display: '-webkit-box',
+              WebkitLineClamp: isExpanded ? 'unset' : 5,
+              WebkitBoxOrient: 'vertical',
+              overflow: isExpanded ? 'visible' : 'hidden',
+              lineHeight: '1.6'
+            }}
+          >
+            "{displayText}"
+          </p>
+          
+          {shouldTruncate && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-gold hover:text-gold-light text-sm font-medium transition-colors duration-200 mb-4"
+            >
+              {isExpanded ? 'Read Less' : 'Read More'}
+            </button>
+          )}
+        </div>
         
-        <div className="flex items-center">
+        <div className="flex items-center mt-auto">
           {imageUrl && (
             <div className="mr-4">
               <img src={imageUrl} alt={author} className="w-12 h-12 rounded-full object-cover" />
