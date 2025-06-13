@@ -67,9 +67,74 @@ const Index = () => {
           height="h-[60vh]" 
         />
         
-        {/* Call to Action Section */}
-        <section className="py-16 bg-gold">
-          <div className="container-custom text-center">
+        {/* Call to Action Section with Decorative Lines */}
+        <section className="py-16 bg-gold relative overflow-hidden">
+          {/* Top Decorative Lines */}
+          <div className="absolute top-8 left-0 right-0 flex justify-center">
+            <div className="flex items-center gap-4 w-full max-w-6xl px-4">
+              {/* Left lines */}
+              <div className="flex-1 space-y-2">
+                <div className="h-0.5 bg-rich-black w-full max-w-[200px] ml-auto"></div>
+                <div className="h-0.5 bg-rich-black w-full max-w-[150px] ml-auto"></div>
+                <div className="h-0.5 bg-rich-black w-full max-w-[100px] ml-auto"></div>
+              </div>
+              
+              {/* Center spacer */}
+              <div className="w-32 sm:w-48 md:w-64"></div>
+              
+              {/* Right lines */}
+              <div className="flex-1 space-y-2">
+                <div className="h-0.5 bg-rich-black w-full max-w-[200px]"></div>
+                <div className="h-0.5 bg-rich-black w-full max-w-[150px]"></div>
+                <div className="h-0.5 bg-rich-black w-full max-w-[100px]"></div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Bottom Decorative Lines */}
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+            <div className="flex items-center gap-4 w-full max-w-6xl px-4">
+              {/* Left lines */}
+              <div className="flex-1 space-y-2">
+                <div className="h-0.5 bg-rich-black w-full max-w-[100px] ml-auto"></div>
+                <div className="h-0.5 bg-rich-black w-full max-w-[150px] ml-auto"></div>
+                <div className="h-0.5 bg-rich-black w-full max-w-[200px] ml-auto"></div>
+              </div>
+              
+              {/* Center spacer */}
+              <div className="w-32 sm:w-48 md:w-64"></div>
+              
+              {/* Right lines */}
+              <div className="flex-1 space-y-2">
+                <div className="h-0.5 bg-rich-black w-full max-w-[100px]"></div>
+                <div className="h-0.5 bg-rich-black w-full max-w-[150px]"></div>
+                <div className="h-0.5 bg-rich-black w-full max-w-[200px]"></div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Side Decorative Lines - Desktop Only */}
+          <div className="absolute left-4 top-1/2 transform -translate-y-1/2 hidden xl:block">
+            <div className="space-y-3">
+              <div className="h-0.5 bg-rich-black w-16"></div>
+              <div className="h-0.5 bg-rich-black w-20"></div>
+              <div className="h-0.5 bg-rich-black w-24"></div>
+              <div className="h-0.5 bg-rich-black w-20"></div>
+              <div className="h-0.5 bg-rich-black w-16"></div>
+            </div>
+          </div>
+          
+          <div className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden xl:block">
+            <div className="space-y-3">
+              <div className="h-0.5 bg-rich-black w-16"></div>
+              <div className="h-0.5 bg-rich-black w-20"></div>
+              <div className="h-0.5 bg-rich-black w-24"></div>
+              <div className="h-0.5 bg-rich-black w-20"></div>
+              <div className="h-0.5 bg-rich-black w-16"></div>
+            </div>
+          </div>
+          
+          <div className="container-custom text-center relative z-10">
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-rich-black mb-4">
               Discover Our Culinary Offerings
             </h2>
