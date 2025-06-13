@@ -67,9 +67,44 @@ const Index = () => {
           height="h-[60vh]" 
         />
         
-        {/* Call to Action Section */}
-        <section className="py-16 bg-gold">
-          <div className="container-custom text-center">
+        {/* Call to Action Section with Decorative Lines */}
+        <section className="py-16 bg-gold relative overflow-hidden">
+          {/* Decorative Lines - Left Side */}
+          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
+            <div className="space-y-4">
+              <div className="h-0.5 bg-rich-black w-64 xl:w-80"></div>
+              <div className="h-0.5 bg-rich-black w-80 xl:w-96"></div>
+              <div className="h-0.5 bg-rich-black w-96 xl:w-[28rem]"></div>
+            </div>
+          </div>
+          
+          {/* Decorative Lines - Right Side */}
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
+            <div className="space-y-4">
+              <div className="h-0.5 bg-rich-black w-96 xl:w-[28rem]"></div>
+              <div className="h-0.5 bg-rich-black w-80 xl:w-96"></div>
+              <div className="h-0.5 bg-rich-black w-64 xl:w-80"></div>
+            </div>
+          </div>
+          
+          {/* Decorative Lines - Mobile/Tablet (Shorter) */}
+          <div className="absolute left-4 top-1/2 transform -translate-y-1/2 block lg:hidden">
+            <div className="space-y-3">
+              <div className="h-0.5 bg-rich-black w-16 sm:w-24"></div>
+              <div className="h-0.5 bg-rich-black w-20 sm:w-32"></div>
+              <div className="h-0.5 bg-rich-black w-24 sm:w-40"></div>
+            </div>
+          </div>
+          
+          <div className="absolute right-4 top-1/2 transform -translate-y-1/2 block lg:hidden">
+            <div className="space-y-3">
+              <div className="h-0.5 bg-rich-black w-24 sm:w-40"></div>
+              <div className="h-0.5 bg-rich-black w-20 sm:w-32"></div>
+              <div className="h-0.5 bg-rich-black w-16 sm:w-24"></div>
+            </div>
+          </div>
+          
+          <div className="container-custom text-center relative z-10">
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-rich-black mb-4">
               Discover Our Culinary Offerings
             </h2>
