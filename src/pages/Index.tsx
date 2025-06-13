@@ -68,14 +68,33 @@ const Index = () => {
         />
         
         {/* Call to Action Section */}
-        <section className="py-16 bg-gold">
-          <div className="container-custom text-center">
+        <section className="py-16 bg-gold relative overflow-hidden">
+          <div className="container-custom text-center relative z-10">
+            {/* Decorative lines above text */}
+            <div className="flex items-center gap-4 w-full max-w-6xl mx-auto mb-8">
+              <div className="flex-1 space-y-2">
+                <div className="h-px bg-rich-black w-full"></div>
+                <div className="h-px bg-rich-black w-full"></div>
+                <div className="h-px bg-rich-black w-full"></div>
+              </div>
+            </div>
+            
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-rich-black mb-4">
               Discover Our Culinary Offerings
             </h2>
             <p className="text-rich-black text-lg mb-8 max-w-2xl mx-auto">
               Explore our carefully crafted menus featuring seasonal ingredients and exceptional flavors designed to make your event unforgettable.
             </p>
+            
+            {/* Decorative lines below text */}
+            <div className="flex items-center gap-4 w-full max-w-6xl mx-auto mb-8">
+              <div className="flex-1 space-y-2">
+                <div className="h-px bg-rich-black w-full"></div>
+                <div className="h-px bg-rich-black w-full"></div>
+                <div className="h-px bg-rich-black w-full"></div>
+              </div>
+            </div>
+            
             <Link to="/menus" className="bg-rich-black hover:bg-rich-gray text-gold py-3 px-6 rounded-md font-inter font-semibold transition-all duration-300 inline-block">
               View Our Menus
             </Link>
