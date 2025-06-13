@@ -27,7 +27,7 @@ const testimonialData = [{
   author: "Angela and Jacob Archer",
   position: "Wedding Clients"
 }, {
-  quote: "This is the second event that we have used Morton's Fine Catering for. The servers were exceptionally polite and responsive. The food was well received without a single complaint from my 60+ attendees at the college. I would not hesitate to use them again. This time we had the baked potato bar with chili and cream of broccoli soup. It came with bread, salad, and dessert. The vinaigrette was a house dressing and it was delicious. I say this as a person who normally does not care for salads. It was a good value for what we paid with plenty of offerings for the vegetarians in the group. I still have coworkers rave about the last meal we had with them as I heard the macaroni and cheese and BBQ was outstanding. I would use this company outside of work for catering if I ever need them. That's how good the company is!",
+  quote: "Morton's did an incredible job for our wedding on 9/14/2024, from the communication, tasting, and day of experience. The food was exactly what we tasted at our tasting, guests raved about it, and the price was an excellent deal. They took care of so many details we didn't think of! Example of their excellent service: I dropped a piece of food on my dress and within 2 seconds one of their servers swooped in with a shout wipe to help with the stain. It was magical. Their whole team was so wonderful!",
   author: "Erin Fredrich-Filer",
   position: "College Event Coordinator"
 }, {
