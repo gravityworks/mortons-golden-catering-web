@@ -23,7 +23,7 @@ const featuresData = [{
   icon: <Wine size={48} />
 }];
 const testimonialData = [{
-  quote: "We went with Morton's to serve brunch-style food for our wedding, and we were absolutely blown away. The food was so good! The impossible sausage quiche was delicious, the french toast was the best I've ever had (by a long shot), a guest came up raving about the sausage links, and we were showered with compliments about the food. I've been to several weddings and this was my favorite meal! And not just because it was my wedding lol. They also helped orchestrate by releasing tables, they were prompt at clearing them when guests finished eating, they were fully setup and ready to serve on time, and they cleaned up quickly afterward. We are so happy we went with them on our big day!",
+  quote: "We enlisted the services of Morton's Fine Catering for our Grand Opening party and they were very easy and accommodating to work with. We had requested something that was not on their menu and without hesitation they said yes we are able to do that. Valerie and Brenda handled all the pre event details and Rae and her staff executed the event wonderfully. They were prompt, professional, and courteous. Willing to do what was needed without hesitation to ensure the guests wanted for nothing.",
   author: "Angela and Jacob Archer",
   position: "Wedding Clients"
 }, {
