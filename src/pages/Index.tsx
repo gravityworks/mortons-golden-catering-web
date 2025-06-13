@@ -23,11 +23,11 @@ const featuresData = [{
   icon: <Wine size={48} />
 }];
 const testimonialData = [{
-  quote: "We enlisted the services of Morton's Fine Catering for our Grand Opening party and they were very easy and accommodating to work with. We had requested something that was not on their menu and without hesitation they said yes we are able to do that. Valerie and Brenda handled all the pre event details and Rae and her staff executed the event wonderfully. They were prompt, professional, and courteous. Willing to do what was needed without hesitation to ensure the guests wanted for nothing.",
+  quote: "Morton’s catered our church’s 60 th Anniversary Celebration and were outstanding before, during and after our event! They were ultimate professionals, while also being very friendly, flexible and helpful. Their staff, service and food were excellent. We highly recommend them to any individual or organization and will always use them as our first choice.",
   author: "Angela and Jacob Archer",
   position: "Wedding Clients"
 }, {
-  quote: "Morton's did an incredible job for our wedding on 9/14/2024, from the communication, tasting, and day of experience. The food was exactly what we tasted at our tasting, guests raved about it, and the price was an excellent deal. They took care of so many details we didn't think of! Example of their excellent service: I dropped a piece of food on my dress and within 2 seconds one of their servers swooped in with a shout wipe to help with the stain. It was magical. Their whole team was so wonderful!",
+  quote: "Our employer hosted a holiday luncheon and everything was GREAT. Food was hot, seasoned well, the staff was punctual and professional. Everyone enjoyed - thank you Morton's!",
   author: "Erin Fredrich-Filer",
   position: "College Event Coordinator"
 }, {
